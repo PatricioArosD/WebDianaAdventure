@@ -5,10 +5,13 @@ import Actividades from '../pages/Actividades'; // Nueva página unificada
 import TourDetail from '../pages/TourDetail';
 import Nosotros from '../pages/Nosotros';
 import Contacto from '../pages/Contacto';
+import Terminos from '../pages/Terminos';
+
 
 export const AppRouter = () => {
   return (
     <Routes>
+      <Route path="/terminos" element={<Terminos />} />
       <Route path="/" element={<Home />} />
       <Route path="/nuestras-actividades" element={<Actividades />} />
       <Route path="/tour/:categoria/:id" element={<TourDetail />} />

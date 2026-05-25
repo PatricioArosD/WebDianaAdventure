@@ -1,6 +1,6 @@
 // src/pages/Contacto.jsx
 import { useState, useEffect, useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
 
 const Contacto = () => {
@@ -107,6 +107,12 @@ const Contacto = () => {
                         </label>
                         <textarea name="Mensaje" className="form-control bg-transparent text-white border-secondary rounded-0" rows="3" value={message} onChange={handleMessageChange} placeholder={t.contact.mindPlaceholder} required></textarea>
                       </div>
+                      <div className="mb-4 form-check">
+  <input type="checkbox" className="form-check-input bg-transparent border-secondary" id="termsCheck" required />
+  <label className="form-check-label text-white opacity-75 font-body small" htmlFor="termsCheck">
+    He leído y acepto los <Link to="/terminos" className="text-nature-green text-decoration-none fw-bold" target="_blank">Términos, Condiciones y Políticas de Servicio</Link>.
+  </label>
+</div>
                       <div className="d-flex gap-3">
                         <button type="submit" className="btn btn-nature rounded-0 flex-grow-1 py-3" disabled={isSubmitting}>
                           {isSubmitting ? t.contact.btnSending : t.contact.btnSend}
@@ -146,3 +152,4 @@ const Contacto = () => {
 };
 
 export default Contacto;
+

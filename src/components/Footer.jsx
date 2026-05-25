@@ -22,7 +22,7 @@ const Footer = () => {
             <h5 className="font-heading fw-bold mb-4 fs-5 text-outline-black">{t.footer.practicalInfo}</h5>
             <ul className="list-unstyled font-body">
               <li className="mb-2"><Link to="#" className="footer-link">{t.footer.faq}</Link></li>
-              <li className="mb-2"><Link to="#" className="footer-link">{t.footer.terms}</Link></li>
+              <li className="mb-2"><Link to="/terminos" className="footer-link">{t.footer.terms}</Link></li>
               <li className="mb-2"><Link to="#" className="footer-link">{t.footer.privacy}</Link></li>
             </ul>
           </div>
