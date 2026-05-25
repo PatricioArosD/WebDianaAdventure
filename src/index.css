@@ -185,3 +185,17 @@ h1, h2, h3, h4, h5, .font-heading {
     transform: scale(1); /* En los últimos 0.4s, vuelve a la normalidad */
   }
 }
+/* --- ESTILO PARA IMÁGENES QUE DEBEN LLENAR UN CUADRO DESIGNADO --- */
+
+.img-cover-full {
+  /* 1. Forzamos a que ocupe todo el alto designado de la columna */
+  height: 100%; 
+  width: 100%;
+  
+  /* 2. El truco mágico: La imagen se estira para cubrir, se recorta si es necesario
+        pero NUNCA se deforma (no se ve "achatada"). */
+  object-fit: cover; 
+  
+  /* 3. Centramos el enfoque en el rostro del guía si la foto es muy alta */
+  object-position: top center; 
+}

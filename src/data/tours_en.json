@@ -20,7 +20,7 @@
         "Dinners and lunches"
       ],
       "thumbnail": "/images/portada-tailandia.jpg",
-      "gallery": ["/assets/images/tailandia1.jpg", "/assets/images/tailandia2.jpg"]
+      "gallery": []
     },
     {
       "id": "taiwan",
@@ -42,7 +42,7 @@
         "Dinners and lunches"
       ],
       "thumbnail": "/images/Portada-Taiwan.JPG",
-      "gallery": ["/assets/images/taiwan1.jpg", "/assets/images/taiwan2.jpg"]
+      "gallery": []
     },
     {
       "id": "torres-del-paine",
@@ -86,7 +86,7 @@
         "Dinners and lunches"
       ],
       "thumbnail": "/images/Portada-Japon.JPG",
-      "gallery": ["/assets/images/japon1.jpg", "/assets/images/japon2.jpg"]
+      "gallery": ["/images/japon 1.jpg", "/images/japon 2.jpg", "/images/japon 3.jpg"]
     },
     {
       "id": "escocia",
@@ -108,7 +108,7 @@
         "Dinners and lunches"
       ],
       "thumbnail": "/images/portada-escocia.jpg",
-      "gallery": ["/assets/images/escocia1.jpg", "/assets/images/escocia2.jpg"]
+      "gallery": []
     }
   ],
   "valdivia": [

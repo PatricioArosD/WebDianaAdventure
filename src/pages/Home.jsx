@@ -159,13 +159,13 @@ const Home = () => {
             {/* Columna Izquierda: Foto del guía */}
             <div className="col-lg-6 mb-4 mb-lg-0">
               <div className="position-relative shadow-lg">
-                <img 
-                 src="/images/guia_rodrigo.png" 
-                  alt="Guía Rodrigo Diana Adventure" 
-                  className="img-fluid w-100 shadow-lg" 
-                  style={{ height: '450px', objectFit: 'cover', objectPosition: 'top' }}
-                  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800"; }}
-                />
+// En src/pages/Home.jsx, dentro de la columna izquierda
+<img 
+  src="/images/guia_rodrigo.jpg" 
+  alt="Guía Rodrigo Diana Adventure" 
+  className="img-cover-full shadow-lg" // <- Reemplazamos 'img-fluid' por nuestra nueva clase.
+  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800"; }}
+/>
                 <div className="position-absolute bottom-0 start-0 w-50" style={{ height: '6px', backgroundColor: 'var(--nature-green)' }}></div>
               </div>
             </div>

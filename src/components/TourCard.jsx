@@ -1,13 +1,23 @@
-// src/components/TourCard.jsx
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
 
 const TourCard = ({ tour, categoria }) => {
-  const { t } = useContext(LanguageContext);
+  // Extraemos language también para saber qué idioma mostrar en la etiqueta
+  const { t, language } = useContext(LanguageContext); 
 
   return (
-    <div className="card border-0 rounded-0 shadow h-100 overflow-hidden tour-card-hover bg-white">
+    <div className="card border-0 rounded-0 shadow h-100 overflow-hidden tour-card-hover bg-white position-relative">
+      
+      {/* NUEVO: Etiqueta de Próximamente solo para grupales */}
+      {categoria === 'grupales' && (
+        <div className="position-absolute top-0 start-0 m-3 z-2">
+          <span className="badge bg-dark text-white rounded-0 px-3 py-2 font-body shadow-sm" style={{ letterSpacing: '2px' }}>
+            {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
+          </span>
+        </div>
+      )}
+
       <div className="position-relative">
         <img src={tour.thumbnail} className="tour-card-img" alt={tour.title} />
         <div className="position-absolute w-100 text-center" style={{ top: '20px' }}>

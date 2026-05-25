@@ -6,7 +6,8 @@ import { LanguageContext } from '../context/LanguageContext';
 const Contacto = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { t } = useContext(LanguageContext);
+  // Se agregó la variable language para las validaciones
+  const { t, language } = useContext(LanguageContext); 
   
   const [showForm, setShowForm] = useState(location.state?.openForm || false);
   const [message, setMessage] = useState('');
@@ -94,9 +95,19 @@ const Contacto = () => {
                         <label className="form-label text-white opacity-75 font-body small text-uppercase tracking-widest">{t.contact.serviceLabel}</label>
                         <select name="Servicio" className="form-select bg-transparent text-white border-secondary rounded-0" style={{ cursor: 'pointer' }} required>
                           <option value="" className="text-dark">{t.contact.services.placeholder}</option>
+                          
+                          {/* Opción habilitada */}
                           <option value="Valdivia" className="text-dark">{t.contact.services.opt1}</option>
-                          <option value="Torres del Paine" className="text-dark">{t.contact.services.opt2}</option>
-                          <option value="Internacional" className="text-dark">{t.contact.services.opt3}</option>
+                          
+                          {/* Opciones deshabilitadas (Viajes grupales) */}
+                          <option value="Torres del Paine" className="text-muted" disabled>
+                            {t.contact.services.opt2} {language === 'ES' ? '(Próximamente)' : '(Coming Soon)'}
+                          </option>
+                          <option value="Internacional" className="text-muted" disabled>
+                            {t.contact.services.opt3} {language === 'ES' ? '(Próximamente)' : '(Coming Soon)'}
+                          </option>
+                          
+                          {/* Opción habilitada */}
                           <option value="Otros" className="text-dark">{t.contact.services.opt4}</option>
                         </select>
                       </div>
@@ -108,11 +119,11 @@ const Contacto = () => {
                         <textarea name="Mensaje" className="form-control bg-transparent text-white border-secondary rounded-0" rows="3" value={message} onChange={handleMessageChange} placeholder={t.contact.mindPlaceholder} required></textarea>
                       </div>
                       <div className="mb-4 form-check">
-  <input type="checkbox" className="form-check-input bg-transparent border-secondary" id="termsCheck" required />
-  <label className="form-check-label text-white opacity-75 font-body small" htmlFor="termsCheck">
-    He leído y acepto los <Link to="/terminos" className="text-nature-green text-decoration-none fw-bold" target="_blank">Términos, Condiciones y Políticas de Servicio</Link>.
-  </label>
-</div>
+                        <input type="checkbox" className="form-check-input bg-transparent border-secondary" id="termsCheck" required />
+                        <label className="form-check-label text-white opacity-75 font-body small" htmlFor="termsCheck">
+                          He leído y acepto los <Link to="/terminos" className="text-nature-green text-decoration-none fw-bold" target="_blank">Términos, Condiciones y Políticas de Servicio</Link>.
+                        </label>
+                      </div>
                       <div className="d-flex gap-3">
                         <button type="submit" className="btn btn-nature rounded-0 flex-grow-1 py-3" disabled={isSubmitting}>
                           {isSubmitting ? t.contact.btnSending : t.contact.btnSend}
@@ -152,4 +163,3 @@ const Contacto = () => {
 };
 
 export default Contacto;
-

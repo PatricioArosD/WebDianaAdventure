@@ -47,7 +47,7 @@ const Nosotros = () => {
         <div className="row justify-content-center align-items-center mb-5 g-5">
           <div className="col-lg-5">
             <div className="position-relative shadow-lg">
-              <img src="/images/Familia.png" alt="Familia Diana Adventure" className="img-fluid w-100" style={{ height: '600px', objectFit: 'cover', objectPosition: 'center' }} />
+              <img src="/images/Familia.jpg" alt="Familia Diana Adventure" className="img-fluid w-100" style={{ height: '600px', objectFit: 'cover', objectPosition: 'center' }} />
               <div className="position-absolute bottom-0 start-0 w-100" style={{ height: '6px', backgroundColor: 'var(--nature-green)' }}></div>
             </div>
           </div>

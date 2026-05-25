@@ -90,7 +90,18 @@ const TourDetail = () => {
                 )}
                 <div className="mt-5 text-center">
                   <p className="font-body fw-bold text-nature-dark mb-2">{t.ui.readyToTravel}</p>
-                  <Link to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">{t.ui.bookNow}</Link>
+                  
+                  {/* Bloqueo del botón para viajes grupales */}
+                  {categoria === 'grupales' ? (
+                    <button className="btn btn-secondary rounded-0 w-100 py-3 shadow-sm" disabled style={{ cursor: 'not-allowed' }}>
+                      {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
+                    </button>
+                  ) : (
+                    <Link to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">
+                      {t.ui.bookNow}
+                    </Link>
+                  )}
+
                 </div>
               </div>
             </div>

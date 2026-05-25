@@ -23,7 +23,7 @@ const Header = () => {
       <div className="container">
         
         <NavLink className="navbar-brand d-flex align-items-center text-white" to="/">
-          <span className="fw-bold fs-3 font-heading text-uppercase text-outline-black">Diana Adventure</span>
+          <span className="fw-bold fs-3 font-heading text-uppercase text-outline-black">Diana Adventure Chile</span>
         </NavLink>
 
         <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
