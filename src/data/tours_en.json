@@ -1,0 +1,153 @@
+{
+  "grupales": [
+    {
+      "id": "tailandia",
+      "title": "Thailand",
+      "shortDescription": "Enjoy your trip to Thailand to the fullest with local people.",
+      "description": "If you are looking for people who specialize in travel, you have come to the right place. We offer various group travel packages, mainly in the British Isles and Asia.\n\nWith Diana Adventure, you will have a real experience with local people and enjoy your trip to Thailand to the fullest. Some of the most important places we visit are the Grand Palace in Bangkok, sacred temples...",
+      "includes": [
+        "Air tickets and transportation to different destinations",
+        "20kg luggage on flights",
+        "Stay in boutique and 4-star hotels",
+        "Chilean guide throughout the trip",
+        "Local guide for different excursions",
+        "Activities and tours in all destinations",
+        "Travel insurance (optional)"
+      ],
+      "excludes": [
+        "Excess baggage charges on flights",
+        "Tips",
+        "Dinners and lunches"
+      ],
+      "thumbnail": "/images/portada-tailandia.jpg",
+      "gallery": ["/assets/images/tailandia1.jpg", "/assets/images/tailandia2.jpg"]
+    },
+    {
+      "id": "taiwan",
+      "title": "Taiwan",
+      "shortDescription": "Explore the green island of Asia, from its misty mountains to its vibrant culture.",
+      "description": "Taiwan is a hidden treasure for nature and culture lovers. On this expedition with Diana Adventure, we will delve into lush National Parks like Taroko, famous for its impressive marble gorges, and hike the trails of Alishan among ancient forests.\n\nTrue to our mission, we work with local communities to ensure our visit supports the conservation of mountain ecosystems and offers an authentic cultural immersion, from night markets to traditional tea plantations, guaranteeing minimal environmental impact.",
+      "includes": [
+        "Air tickets and transportation to different destinations",
+        "20kg luggage on flights",
+        "Stay in boutique and 4-star hotels",
+        "Chilean guide throughout the trip",
+        "Local guide for different excursions",
+        "Activities and tours in all destinations",
+        "Travel insurance (optional)"
+      ],
+      "excludes": [
+        "Excess baggage charges on flights",
+        "Tips",
+        "Dinners and lunches"
+      ],
+      "thumbnail": "/images/Portada-Taiwan.JPG",
+      "gallery": ["/assets/images/taiwan1.jpg", "/assets/images/taiwan2.jpg"]
+    },
+    {
+      "id": "torres-del-paine",
+      "title": "Torres del Paine",
+      "shortDescription": "Group adventure at the end of the world. Connect with the majesty of Patagonia.",
+      "description": "Our local jewel and one of the most spectacular destinations on the planet. This group expedition to Torres del Paine is designed to experience Patagonia in its purest and wildest state. We will hike the iconic trails, admiring ancient glaciers, turquoise lakes, and the imposing granite horns.\n\nUnder the philosophy of Diana Adventure, this trip has a strong focus on regeneration. We will learn about endemic flora and fauna, respecting the delicate ecosystems of the end of the world and sharing with local guides passionate about the conservation of our natural heritage.",
+      "includes": [
+        "Air tickets (domestic flights) and transfers",
+        "20kg luggage on flights",
+        "Stay in boutique hotels and equipped Refugios",
+        "Specialized Chilean guide throughout the trip",
+        "Local guide for specific excursions",
+        "Activities, park entrance fees, and tours",
+        "Travel insurance (optional)"
+      ],
+      "excludes": [
+        "Excess baggage charges on flights",
+        "Tips",
+        "Dinners and lunches (except those detailed in refugios)"
+      ],
+      "thumbnail": "/images/Portada-TPaine.jpg",
+      "gallery": ["/images/parque torres 1.jpg", "/images/parque torres 2.jpg", "/images/parque torres 3.jpg", "/images/parque torres 4.jpg", "/images/parque torres 5.jpg", "/images/parque torres 6.jpg", "/images/parque torres 7.jpg", "/images/parque torres 8.jpg"]
+    },
+    {
+      "id": "japon",
+      "title": "Japan",
+      "shortDescription": "Experience the contrast between ancient tradition and the vibrant nature of the land of the rising sun.",
+      "description": "Discover a Japan beyond the neon and big cities. With Diana Adventure, we take you to explore ancient pilgrimage routes and immerse yourself in the serenity of the Japanese Alps, hidden shrines, and majestic bamboo forests.\n\nOur expedition combines respect for traditions with our ecological commitment. We will experience staying in traditional ryokans, enjoying local hospitality, and connecting with a culture that reveres nature in every aspect of its daily life, shaping more conscious travelers.",
+      "includes": [
+        "Air tickets and transportation (includes JR bullet train passes)",
+        "20kg luggage on flights",
+        "Stay in boutique hotels and Ryokans (traditional accommodation)",
+        "Chilean guide throughout the trip",
+        "Local guide for different excursions",
+        "Activities and tours in all destinations",
+        "Travel insurance (optional)"
+      ],
+      "excludes": [
+        "Excess baggage charges on flights",
+        "Tips",
+        "Dinners and lunches"
+      ],
+      "thumbnail": "/images/Portada-Japon.JPG",
+      "gallery": ["/assets/images/japon1.jpg", "/assets/images/japon2.jpg"]
+    },
+    {
+      "id": "escocia",
+      "title": "Scotland",
+      "shortDescription": "Delve into the Highlands: castles, mysterious lochs, and epic landscapes.",
+      "description": "The Scottish Highlands await us with their dramatic landscapes, deep glens, and fascinating history. On this route, we will explore from the Isle of Skye to enigmatic lochs, hiking trails surrounded by rugged nature and towering mountains.\n\nTrue to our essence, we prioritize contact with rural communities and support conservation projects seeking to restore and protect ancient Scottish ecosystems. Each excursion is designed to leave a positive footprint and lead you to adventure sustainably.",
+      "includes": [
+        "Air tickets and transportation to different destinations",
+        "20kg luggage on flights",
+        "Stay in boutique and 4-star hotels",
+        "Chilean guide throughout the trip",
+        "Local guide for different excursions",
+        "Activities and tours in all destinations",
+        "Travel insurance (optional)"
+      ],
+      "excludes": [
+        "Excess baggage charges on flights",
+        "Tips",
+        "Dinners and lunches"
+      ],
+      "thumbnail": "/images/portada-escocia.jpg",
+      "gallery": ["/assets/images/escocia1.jpg", "/assets/images/escocia2.jpg"]
+    }
+  ],
+  "valdivia": [
+    {
+      "id": "birdwatching-valdivia",
+      "title": "Birdwatching Valdivia",
+      "duration": "Half day (approximately 4 to 5 hours)",
+      "shortDescription": "Kayak tour through the Cutipay River nature sanctuary.",
+      "description": "From Valdivia, we head to the town of Cutipay, located 12 km west of the city, home to the Cutipay River and nature sanctuary. There, we will take a kayak tour along the river to observe the birds found in the wetland. The journey will be conducted with the utmost care, trying not to scare away the birds or invade their nests.\n\nOur main guide for this excursion is Rodrigo, who has extensive experience in natural areas...",
+      "includes": [
+        "Transportation",
+        "Specialized guide",
+        "First aid kit",
+        "Binoculars",
+        "Kayak"
+      ],
+      "excludes": [],
+      "thumbnail": "/images/portada-birdwaching.jpg",
+      "gallery": ["/images/birdwaching-1.png", "/images/birdwaching-2.png", "/images/birdwaching-3.jpg"]
+    },
+    {
+      "id": "hiking-alerce-costero",
+      "title": "Alerce Costero National Park Hiking",
+      "duration": "Full day (approximately 10 hours)",
+      "shortDescription": "Guided trekking to the imposing ancient alerce tree with observation of native flora and fauna.",
+      "description": "Pick up is provided in the city of Valdivia, heading towards the Alerce Costero National Park, located approximately 2.5 hours away. Upon entering the park, we will access the trail to the ancient alerce tree. During the 5 km round trip, we can observe a great diversity of local flora with high chances of spotting wildlife, mainly birds.\n\n* Important recommendations: \n- Wear comfortable outdoor clothing.\n- Bring sunglasses.",
+      "includes": [
+        "Specialized tour guide",
+        "Transportation",
+        "Breakfast and trail snacks",
+        "Photo session",
+        "Trekking poles"
+      ],
+      "excludes": [
+        "Park entrance fees",
+        "Personal equipment"
+      ],
+      "thumbnail": "/images/portada-alerce.jpeg",
+      "gallery": ["/images/parque Alerce Costero 1.jpeg", "/images/parque Alerce Costero 2.jpeg"]
+    }
+  ]
+}

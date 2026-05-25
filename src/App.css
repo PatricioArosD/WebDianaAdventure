@@ -1,0 +1,26 @@
+:root {
+  /* Paleta Patagonia */
+  --patagonia-teal: #6D9599;   /* Azul/Verde grisáceo - Ideal para fondos o encabezados suaves */
+  --patagonia-olive: #7F7948;  /* Verde oliva - Excelente para botones secundarios o detalles de naturaleza */
+  --patagonia-sand: #F7B85D;   /* Arena/Amarillo - Perfecto para botones de "Call to action" (Llamados a la acción) o acentos */
+  --patagonia-terra: #E47F4D;  /* Terracota claro - Buen contraste para iconos o subtítulos */
+  --patagonia-rust: #B2442C;   /* Óxido/Rojo oscuro - Ideal para hover en botones o destacar precios/alertas */
+  
+  /* Colores base para texto y fondos neutros */
+  --text-dark: #333333;
+  --bg-light: #F9F9F9;
+}
+
+/* Clases de utilidad personalizadas para usar junto a Bootstrap */
+.bg-patagonia-teal { background-color: var(--patagonia-teal) !important; color: white; }
+.bg-patagonia-sand { background-color: var(--patagonia-sand) !important; color: var(--text-dark); }
+.text-patagonia-rust { color: var(--patagonia-rust) !important; }
+.btn-patagonia {
+  background-color: var(--patagonia-rust);
+  color: white;
+  border: none;
+}
+.btn-patagonia:hover {
+  background-color: var(--patagonia-terra);
+  color: white;
+}

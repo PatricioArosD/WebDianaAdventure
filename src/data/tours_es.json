@@ -1,0 +1,152 @@
+{
+  "grupales": [
+    {
+      "id": "tailandia",
+      "title": "Tailandia",
+      "shortDescription": "Disfruta a concho tu viaje por Tailandia con gente local.",
+      "description": "La verdad es que si buscas gente que se especializa en viajes, llegaste al lugar correcto. Tenemos a disposición diferentes paquetes de viajes grupales, en las islas británicas y Asia principalmente.\n\nCon Diana adventure tendrás una real experiencia con gente local y podrás disfrutar a concho tu viaje por Tailandia, dentro de los lugares más importantes que tenemos en son el palacio real de bangkok, templos sagrados...",
+      "includes": [
+        "Ticket aéreos y transporte en los diferentes destinos",
+        "Equipaje de 20kg en los vuelos",
+        "Estadía en Hoteles boutique y de 4 estrellas",
+        "Guía chileno durante todo el viaje",
+        "Guía local para las diferentes excursiones",
+        "Actividades y tours en todos los destinos",
+        "Seguro de viajes (optativo)"
+      ],
+      "excludes": [
+        "Cargos por sobre equipaje en los vuelos",
+        "Propinas",
+        "Cenas y almuerzos"
+      ],
+      "thumbnail": "/images/portada-tailandia.jpg",
+      "gallery": ["/assets/images/tailandia1.jpg", "/assets/images/tailandia2.jpg"]
+    },{
+      "id": "taiwan",
+      "title": "Taiwán",
+      "shortDescription": "Explora la isla verde de Asia, desde sus montañas brumosas hasta su vibrante cultura.",
+      "description": "Taiwán es un tesoro oculto para los amantes de la naturaleza y la cultura. En esta expedición con Diana Adventure, nos adentraremos en los exuberantes Parques Nacionales como Taroko, famoso por sus impresionantes desfiladeros de mármol, y recorreremos los senderos de Alishan entre bosques milenarios.\n\nFieles a nuestra misión, trabajamos con comunidades locales para asegurar que nuestra visita apoye la conservación de los ecosistemas montañosos y ofrezca una inmersión cultural auténtica, desde los mercados nocturnos hasta las plantaciones de té tradicionales, garantizando el mínimo impacto ambiental.",
+      "includes": [
+        "Ticket aéreos y transporte en los diferentes destinos",
+        "Equipaje de 20kg en los vuelos",
+        "Estadía en Hoteles boutique y de 4 estrellas",
+        "Guía chileno durante todo el viaje",
+        "Guía local para las diferentes excursiones",
+        "Actividades y tours en todos los destinos",
+        "Seguro de viajes (optativo)"
+      ],
+      "excludes": [
+        "Cargos por sobre equipaje en los vuelos",
+        "Propinas",
+        "Cenas y almuerzos"
+      ],
+      "thumbnail": "/images/Portada-Taiwan.JPG",
+      "gallery": ["/assets/images/taiwan1.jpg", "/assets/images/taiwan2.jpg"]
+    },
+    {
+      "id": "torres-del-paine",
+      "title": "Torres del Paine",
+      "shortDescription": "Aventura grupal en el fin del mundo. Conecta con la majestuosidad de la Patagonia.",
+      "description": "Nuestra joya local y uno de los destinos más espectaculares del planeta. Esta expedición grupal a Torres del Paine está diseñada para vivir la Patagonia en su estado más puro y salvaje. Recorreremos los icónicos senderos, admirando glaciares milenarios, lagos turquesas y los imponentes cuernos de granito.\n\nBajo la filosofía de Diana Adventure, este viaje tiene un fuerte enfoque en la regeneración. Nos educaremos sobre la flora y fauna endémica, respetando los delicados ecosistemas del fin del mundo y compartiendo con guías locales apasionados por la conservación de nuestro patrimonio natural.",
+      "includes": [
+        "Ticket aéreos (vuelos nacionales) y traslados",
+        "Equipaje de 20kg en los vuelos",
+        "Estadía en Hoteles boutique y Refugios equipados",
+        "Guía chileno especializado durante todo el viaje",
+        "Guía local para excursiones específicas",
+        "Actividades, entradas a parques y tours",
+        "Seguro de viajes (optativo)"
+      ],
+      "excludes": [
+        "Cargos por sobre equipaje en los vuelos",
+        "Propinas",
+        "Cenas y almuerzos (excepto los detallados en refugios)"
+      ],
+      "thumbnail": "/images/Portada-TPaine.jpg",
+      "gallery": ["/images/parque torres 1.jpg", "/images/parque torres 2.jpg", "/images/parque torres 3.jpg", "/images/parque torres 4.jpg", "/images/parque torres 5.jpg", "/images/parque torres 6.jpg", "/images/parque torres 7.jpg", "/images/parque torres 8.jpg"]
+    },
+    {
+      "id": "japon",
+      "title": "Japón",
+      "shortDescription": "Contrasta la tradición milenaria y la naturaleza vibrante del país del sol naciente.",
+      "description": "Descubre un Japón más allá del neón y las grandes ciudades. Con Diana Adventure, te llevamos a explorar los antiguos caminos de peregrinación y a sumergirte en la serenidad de los Alpes Japoneses, santuarios ocultos y majestuosos bosques de bambú.\n\nNuestra expedición combina el respeto por las tradiciones con nuestro compromiso ecológico. Viviremos la experiencia de alojarnos en ryokans tradicionales, disfrutando de la hospitalidad local y conectando con una cultura que venera la naturaleza en cada aspecto de su vida diaria, formando viajeros más conscientes.",
+      "includes": [
+        "Ticket aéreos y transporte (incluye pases de tren bala JR)",
+        "Equipaje de 20kg en los vuelos",
+        "Estadía en Hoteles boutique y Ryokans (alojamiento tradicional)",
+        "Guía chileno durante todo el viaje",
+        "Guía local para las diferentes excursiones",
+        "Actividades y tours en todos los destinos",
+        "Seguro de viajes (optativo)"
+      ],
+      "excludes": [
+        "Cargos por sobre equipaje en los vuelos",
+        "Propinas",
+        "Cenas y almuerzos"
+      ],
+      "thumbnail": "/images/Portada-Japon.JPG",
+      "gallery": ["/assets/images/japon1.jpg", "/assets/images/japon2.jpg"]
+    },
+    {
+      "id": "escocia",
+      "title": "Escocia",
+      "shortDescription": "Adéntrate en las Tierras Altas: castillos, lagos misteriosos y paisajes épicos.",
+      "description": "Las Tierras Altas (Highlands) de Escocia nos esperan con sus paisajes dramáticos, valles profundos y una historia fascinante. En esta ruta, exploraremos desde la Isla de Skye hasta lagos enigmáticos, caminando por senderos rodeados de naturaleza agreste y montañas imponentes.\n\nFieles a nuestra esencia, priorizamos el contacto con las comunidades rurales y el apoyo a proyectos de conservación que buscan restaurar y proteger los antiguos ecosistemas escoceses. Cada excursión está pensada para dejar una huella positiva y llevarte a la aventura de forma sustentable.",
+      "includes": [
+        "Ticket aéreos y transporte en los diferentes destinos",
+        "Equipaje de 20kg en los vuelos",
+        "Estadía en Hoteles boutique y de 4 estrellas",
+        "Guía chileno durante todo el viaje",
+        "Guía local para las diferentes excursiones",
+        "Actividades y tours en todos los destinos",
+        "Seguro de viajes (optativo)"
+      ],
+      "excludes": [
+        "Cargos por sobre equipaje en los vuelos",
+        "Propinas",
+        "Cenas y almuerzos"
+      ],
+      "thumbnail": "/images/portada-escocia.jpg",
+      "gallery": ["/assets/images/escocia1.jpg", "/assets/images/escocia2.jpg"]
+    }
+  ],
+  "valdivia": [
+    {
+      "id": "birdwatching-valdivia",
+      "title": "Birdwatching Valdivia",
+      "duration": "Half day de (4 a 5 horas aproximadamente)",
+      "shortDescription": "Recorrido en kayak por el santuario de la naturaleza río Cutipay.",
+      "description": "Desde Valdivia nos dirigimos a la localidad de Cutipay que está a 12 km al oeste de la ciudad, donde está el río y santuario de la naturaleza río Cutipay. Allí con kayak haremos un recorrido por el río con la finalidad de observar las aves que se encuentren en el humedal. El trayecto se realizará con el mayor resguardo posible tratando de no ahuyentar las aves ni tampoco invadir sus nidos.\n\nNuestro principal guía para esta excursión es Rodrigo, quien posee gran experiencia en áreas naturales...",
+      "includes": [
+        "Traslado",
+        "Guía especializado",
+        "Botiquín de primeros auxilios",
+        "Binoculares",
+        "Kayak"
+      ],
+      "excludes": [],
+      "thumbnail": "/images/portada-birdwaching.jpg",
+      "gallery": ["/images/birdwaching-1.png", "/images/birdwaching-2.png", "/images/birdwaching-3.jpg"]
+    },
+    {
+      "id": "hiking-alerce-costero",
+      "title": "Hiking Parque Nacional Alerce Costero",
+      "duration": "Full day (10 horas aproximadamente)",
+      "shortDescription": "Trekking guiado hacia el imponente alerce milenario con observación de flora y fauna nativa.",
+      "description": "Se realiza el pick up en la ciudad de Valdivia, para dirigirnos hacia el Parque Nacional Alerce Costero, el cual se ubica aproximadamente a 2.5 horas desde Valdivia. Una vez ingresando al parque podremos acceder al sendero del alerce milenario. Durante el trayecto de 5 km ida y vuelta podremos observar una gran diversidad de flora del lugar con grandes posibilidades de encontrar fauna en el sector, principalmente aves.\n\n* Recomendaciones importantes: \n- Llevar ropa cómoda outdoor.\n- Traer lentes de sol.",
+      "includes": [
+        "Guía turístico especializado",
+        "Transporte",
+        "Desayuno y ración de marcha",
+        "Sesión fotográfica",
+        "Bastones de trekking"
+      ],
+      "excludes": [
+        "Entradas al parque",
+        "Equipamiento personal"
+      ],
+      "thumbnail": "/images/portada-alerce.jpeg",
+      "gallery": ["/images/parque Alerce Costero 1.jpeg", "/images/parque Alerce Costero 2.jpeg"]
+    }
+  ]
+}

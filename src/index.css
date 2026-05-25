@@ -1,0 +1,187 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  /* Paleta "Evasión/Patagonia" basada en la referencia */
+  --nature-dark: #1F2C23;      /* Verde muy oscuro para textos y footer */
+  --nature-green: #2B4C26;     /* Verde bosque principal (botones) */
+  --nature-green-hover: #1E361B;
+  --nature-bg: #F4F3EF;        /* Fondo hueso/pergamino claro */
+  --nature-light: #FFFFFF;
+  
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: var(--nature-bg);
+  color: var(--nature-dark);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Clases utilitarias */
+.bg-nature-dark { background-color: var(--nature-dark); color: var(--nature-light); }
+.text-nature-green { color: var(--nature-green); }
+
+.btn-nature {
+  background-color: var(--nature-green);
+  color: var(--nature-light);
+  border: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-nature:hover {
+  background-color: var(--nature-green-hover);
+  color: var(--nature-light);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Efecto de superposición para las tarjetas */
+.overlap-cards {
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Tarjetas de los tours */
+.tour-card-img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tour-card-banner {
+  background-color: var(--nature-dark);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+/* --- ESTILOS DEL CARRUSEL DE TARJETAS --- */
+
+/* Contenedor relativo para poder anclar los botones a los lados */
+.carousel-wrapper {
+  position: relative;
+}
+
+/* Diseño base de los botones laterales */
+.btn-carousel-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical perfecto */
+  z-index: 10;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--nature-dark);
+  color: var(--nature-light);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Posición específica izquierda y derecha (salen un poco del borde) */
+.btn-carousel-prev {
+  left: -20px;
+}
+
+.btn-carousel-next {
+  right: -20px;
+}
+
+/* Efecto hover (resalte) de los botones */
+.btn-carousel-side:hover {
+  background-color: var(--nature-green);
+  transform: translateY(-50%) scale(1.15); /* Crece ligeramente */
+  cursor: pointer;
+}
+
+/* Transición para el efecto de zoom en las imágenes */
+.tour-card-img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.5s ease; /* Suavidad en el movimiento */
+}
+
+/* Al pasar el mouse por la tarjeta, la imagen hace zoom */
+.card:hover .tour-card-img {
+  transform: scale(1.08);
+}
+/* --- ESTILOS DEL FOOTER --- */
+.footer-bg {
+  /* Imagen de bosque oscuro para el fondo del footer (estilo referencia) */
+  background-image: linear-gradient(rgba(31, 44, 35, 0.8), rgba(31, 44, 35, 0.9)), url('https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2000');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Contorno negro para resaltar el texto sobre fondos complejos */
+.text-outline-black {
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     2px  2px 4px rgba(0,0,0,0.9); /* Sombra adicional para profundidad */
+  color: white !important;
+}
+
+/* Enlaces del footer con contorno */
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.9);
+}
+
+.footer-link:hover {
+  color: var(--nature-sand, #F7B85D); /* Un toque de color al pasar el mouse */
+  transform: translateX(5px);
+  display: inline-block;
+}
+/* --- ESTILOS DE LA GALERÍA (TOUR DETAIL) --- */
+
+.gallery-img-wrapper {
+  overflow: hidden; /* Evita que el zoom se salga del marco de la foto */
+}
+
+.gallery-img-zoom {
+  /* Previene pequeños parpadeos al hacer zoom en algunos navegadores */
+  transform: translateZ(0); 
+  will-change: transform;
+}
+
+/* Al mantener el mouse, se ejecuta la animación de 4 segundos */
+.gallery-img-wrapper:hover .gallery-img-zoom {
+  animation: zoomHoldRevert 4s forwards;
+}
+
+/* Línea de tiempo de la animación */
+@keyframes zoomHoldRevert {
+  0% { 
+    transform: scale(1); 
+  }
+  10% { 
+    transform: scale(1.15); /* En los primeros 0.4s, hace un zoom rápido y suave */
+  }
+  90% { 
+    transform: scale(1.15); /* Se mantiene agrandada hasta los 3.6s */
+  }
+  100% { 
+    transform: scale(1); /* En los últimos 0.4s, vuelve a la normalidad */
+  }
+}
