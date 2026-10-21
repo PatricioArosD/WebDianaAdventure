@@ -45,25 +45,27 @@
     },
     {
       "id": "torres-del-paine",
-      "title": "Torres del Paine",
-      "shortDescription": "Aventura grupal en el fin del mundo. Conecta con la majestuosidad de la Patagonia.",
-      "description": "Nuestra joya local y uno de los destinos más espectaculares del planeta. Esta expedición grupal a Torres del Paine está diseñada para vivir la Patagonia en su estado más puro y salvaje. Recorreremos los icónicos senderos, admirando glaciares milenarios, lagos turquesas y los imponentes cuernos de granito.\n\nBajo la filosofía de Diana Adventure, este viaje tiene un fuerte enfoque en la regeneración. Nos educaremos sobre la flora y fauna endémica, respetando los delicados ecosistemas del fin del mundo y compartiendo con guías locales apasionados por la conservación de nuestro patrimonio natural.",
+      "title": "Torres del Paine Mágico",
+      "duration": "4 días / 3 noches",
+      "shortDescription": "Disfruta de una experiencia inolvidable en el corazón de la Patagonia chilena. Un viaje diseñado para conectar con la naturaleza salvaje.",
+      "description": "Disfruta de una experiencia inolvidable en el corazón de la Patagonia chilena. Un viaje diseñado para conectar con la naturaleza salvaje, recorrer senderos imponentes y contemplar paisajes únicos en el mundo.\n\nGrupo mínimo: 6 pasajeros.\n\n🗺️ Itinerario Día a Día:\n\n• Día 1: Bienvenida a la Patagonia y Primeras Vistas\nEncuentro: Recepción del grupo en el Aeropuerto de Puerto Natales.\nRuta al parque: Traslado directo hacia la Hostería Pehoé, ubicada en el corazón de Torres del Paine.\nActividades del día: Visita al Monumento Natural Cueva del Milodón (sujeto a horarios de apertura) y Trekking por el Sendero Cóndor, un mirador natural perfecto para postales panorámicas del Macizo Paine.\n\n• Día 2: Safari Fotográfico y Miradores del Paine\nExploración en vehículo: Recorrido panorámico diseñado para capturar los contrastes del parque.\nPuntos clave a visitar: Playa Grey (vistas a los témpanos de hielo), Villa Monzino, Portería Sarmiento, Laguna Amarga, la impresionante Cascada del Paine y Laguna Azul.\n\n• Día 3: El Gran Desafío (Ruta a Elegir)\nOpción Principal - Sendero Base Torres (Dificultad Alta): La caminata más famosa de la Patagonia. Exigente pero gratificante, coronando en la laguna turquesa a los pies de las imponentes torres monolíticas.\nOpción Alternativa - Sendero Valle Francés (Dificultad Media/Alta): Caminata hacia el anfiteatro de paredes de granito en el corazón del circuito W. (Nota: Esta opción requiere el pago extra del catamarán en Lago Pehoé).\n\n• Día 4: Rastreo de Fauna y Retorno\nMañana de aventura: Caminata por el Sendero Aonikenk, una zona de estepa patagónica ideal para el avistamiento de fauna local como guanacos, zorros y, con suerte, el esquivo puma.\nDespedida: Regreso en transporte privado hacia la ciudad de Puerto Natales para finalizar los servicios.",
       "includes": [
-        "Ticket aéreos (vuelos nacionales) y traslados",
-        "Equipaje de 20kg en los vuelos",
-        "Estadía en Hoteles boutique y Refugios equipados",
-        "Guía chileno especializado durante todo el viaje",
-        "Guía local para excursiones específicas",
-        "Actividades, entradas a parques y tours",
-        "Seguro de viajes (optativo)"
+        "Traslados: Transporte privado ida y vuelta desde Puerto Natales hasta el hotel dentro del parque.",
+        "Líder de ruta: Guía-conductor certificado durante todo el recorrido.",
+        "Alojamiento: Estancia en la icónica Hostería Pehoé con desayuno incluido.",
+        "Aventuras: Excursiones guiadas diarias según el itinerario.",
+        "Raciones de marcha: Snacks diarios para las caminatas.",
+        "Seguridad: Seguros de asistencia en viaje incluidos."
       ],
       "excludes": [
-        "Cargos por sobre equipaje en los vuelos",
-        "Propinas",
-        "Cenas y almuerzos (excepto los detallados en refugios)"
+        "Entradas al Parque Nacional Torres del Paine y al Monumento Cueva del Milodón.",
+        "Navegación en el Glaciar Grey.",
+        "Tickets del catamarán del Lago Pehoé (necesarios para la opción de Valle Francés).",
+        "Almuerzos y cenas.",
+        "Bastones de trekking o ropa técnica."
       ],
       "thumbnail": "/images/Portada-TPaine.jpg",
-      "gallery": ["/images/parque torres 1.jpg", "/images/parque torres 2.jpg", "/images/parque torres 3.jpg", "/images/parque torres 4.jpg", "/images/parque torres 5.jpg", "/images/parque torres 6.jpg", "/images/parque torres 7.jpg", "/images/parque torres 8.jpg"]
+      "gallery": ["/images/parque torres 1.jpg", "/images/parque torres 2.jpg", "/images/parque torres 3.jpg", "/images/parque torres 4.jpg", "/images/parque torres 5.jpg", "/images/parque torres 6.jpg", "/images/parque torres 7.jpg"]
     },
     {
       "id": "japon",

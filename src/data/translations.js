@@ -6,7 +6,9 @@ export const translations = {
       activities: "Nuestras Actividades",
       about: "Nosotros",
       contact: "Contacto",
-      book: "Reserva tu Aventura",
+      book: "Reserva tu Aventura"
+    },
+    home: {
       guideTitle: "Nuestro Guía",
       guideText: "Guía de Turismo con más de 10 años de experiencia internacional y sólida especialización en interpretación de flora y fauna, conservación y aviturismo. Con una sólida disciplina y excelente condición física forjada a través de la práctica de múltiples deportes a lo largo de mi vida, lidero con éxito expediciones en destinos de alta exigencia como San Pedro de Atacama y Torres del Paine. Combino habilidades avanzadas de seguridad en terreno (certificación WFR) con un perfil bilingüe (inglés/portugués), enfocado en la educación ambiental.",
       guideBtn: "Conocer al equipo"
@@ -93,7 +95,9 @@ export const translations = {
       activities: "Our Activities",
       about: "About Us",
       contact: "Contact",
-      book: "Book Your Adventure",
+      book: "Book Your Adventure"
+    },
+    home: {
       guideTitle: "Our Guide",
       guideText: "Tour Guide with over 10 years of international experience and a strong specialization in flora and fauna interpretation, conservation, and birdwatching. With solid discipline and excellent physical condition forged through multiple sports throughout my life, I successfully lead expeditions in highly demanding destinations such as San Pedro de Atacama and Torres del Paine. I combine advanced field safety skills (WFR certification) with a bilingual profile (English/Portuguese), focused on environmental education.",
       guideBtn: "Meet the team"

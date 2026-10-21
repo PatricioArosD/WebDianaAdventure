@@ -16,6 +16,12 @@ const Contacto = () => {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
+  useEffect(() => {
+    if (!isSuccess) return;
+    const timer = setTimeout(() => navigate('/'), 3500);
+    return () => clearTimeout(timer);
+  }, [isSuccess, navigate]);
+
   const handleMessageChange = (e) => {
     if (e.target.value.length <= 300) setMessage(e.target.value);
   };
@@ -32,12 +38,11 @@ const Contacto = () => {
       });
       if (response.ok) {
         setIsSuccess(true);
-        setTimeout(() => { navigate('/'); }, 3500);
       } else {
         alert('Error');
         setIsSubmitting(false);
       }
-    } catch (error) {
+    } catch {
       alert('Error de red.');
       setIsSubmitting(false);
     }

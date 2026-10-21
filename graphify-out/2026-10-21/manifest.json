@@ -1,0 +1,134 @@
+{
+  "eslint.config.js": {
+    "mtime": 1777846156.7269156,
+    "seen": 1792612551.9651375,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "package.json": {
+    "mtime": 1777849564.013019,
+    "seen": 1792612551.9651449,
+    "ast_hash": "9bf00d509dfe7d8f8093cb0a03db7d45",
+    "semantic_hash": "9bf00d509dfe7d8f8093cb0a03db7d45"
+  },
+  "src/App.jsx": {
+    "mtime": 1779673360.921772,
+    "seen": 1792612551.9651484,
+    "ast_hash": "964ffe96ed6db416450fe5fc1262d79d",
+    "semantic_hash": "964ffe96ed6db416450fe5fc1262d79d"
+  },
+  "src/components/Feedback.jsx": {
+    "mtime": 1777846971.0721512,
+    "seen": 1792612551.9651513,
+    "ast_hash": "ae2c40f33cdc1659d8de5aa1e98ba2a2",
+    "semantic_hash": "ae2c40f33cdc1659d8de5aa1e98ba2a2"
+  },
+  "src/components/Footer.jsx": {
+    "mtime": 1784841440.039411,
+    "seen": 1792612551.965154,
+    "ast_hash": "39b4376fac30ffd094bdb91d8364ca8f",
+    "semantic_hash": "39b4376fac30ffd094bdb91d8364ca8f"
+  },
+  "src/components/Header.jsx": {
+    "mtime": 1784841220.093798,
+    "seen": 1792612551.9651568,
+    "ast_hash": "25293df68940239280de72847f5a4fdb",
+    "semantic_hash": "25293df68940239280de72847f5a4fdb"
+  },
+  "src/components/HeroCarousel.jsx": {
+    "mtime": 1777850987.0916326,
+    "seen": 1792612551.96516,
+    "ast_hash": "df47accc85533e4d06981b5e9cda60bb",
+    "semantic_hash": "df47accc85533e4d06981b5e9cda60bb"
+  },
+  "src/components/TourCard.jsx": {
+    "mtime": 1779728226.2425766,
+    "seen": 1792612551.9651628,
+    "ast_hash": "f174d7e887da9b34e6476da0de96fb29",
+    "semantic_hash": "f174d7e887da9b34e6476da0de96fb29"
+  },
+  "src/context/LanguageContext.jsx": {
+    "mtime": 1779652453.1257799,
+    "seen": 1792612551.9651656,
+    "ast_hash": "86eb356c37a242bc9c6c81645504de96",
+    "semantic_hash": "86eb356c37a242bc9c6c81645504de96"
+  },
+  "src/data/tours_en.json": {
+    "mtime": 1784840743.5168865,
+    "seen": 1792612551.9651685,
+    "ast_hash": "a3ce2e1ba02aa9433d97a8c00e68e572",
+    "semantic_hash": "a3ce2e1ba02aa9433d97a8c00e68e572"
+  },
+  "src/data/tours_es.json": {
+    "mtime": 1784840766.3439186,
+    "seen": 1792612551.965171,
+    "ast_hash": "bf153e650c140cd4c7c2658809c8e740",
+    "semantic_hash": "bf153e650c140cd4c7c2658809c8e740"
+  },
+  "src/data/translations.js": {
+    "mtime": 1779660455.496436,
+    "seen": 1792612551.965174,
+    "ast_hash": "7d14ae6be6ffd425ae1e64b2d10536de",
+    "semantic_hash": "7d14ae6be6ffd425ae1e64b2d10536de"
+  },
+  "src/main.jsx": {
+    "mtime": 1779673296.7610607,
+    "seen": 1792612551.9651768,
+    "ast_hash": "56610da7e2b4bcd023daa5804dfa0eda",
+    "semantic_hash": "56610da7e2b4bcd023daa5804dfa0eda"
+  },
+  "src/pages/Actividades.jsx": {
+    "mtime": 1779653221.7411993,
+    "seen": 1792612551.9651797,
+    "ast_hash": "79677b64105353e878b13da1d7f9d18e",
+    "semantic_hash": "79677b64105353e878b13da1d7f9d18e"
+  },
+  "src/pages/Contacto.jsx": {
+    "mtime": 1779728427.5561073,
+    "seen": 1792612551.9651825,
+    "ast_hash": "f36bb85bdd18a843cb0036eb790e3f16",
+    "semantic_hash": "f36bb85bdd18a843cb0036eb790e3f16"
+  },
+  "src/pages/Home.jsx": {
+    "mtime": 1784841185.691069,
+    "seen": 1792612551.9651852,
+    "ast_hash": "cd042b39e8e9327c720819468a66db2b",
+    "semantic_hash": "cd042b39e8e9327c720819468a66db2b"
+  },
+  "src/pages/Nosotros.jsx": {
+    "mtime": 1779727792.3711884,
+    "seen": 1792612551.965188,
+    "ast_hash": "875f8f9cd3ee68a6c297157cbc59bc4c",
+    "semantic_hash": "875f8f9cd3ee68a6c297157cbc59bc4c"
+  },
+  "src/pages/Terminos.jsx": {
+    "mtime": 1779673272.9718516,
+    "seen": 1792612551.965191,
+    "ast_hash": "7eefdc168b109c009e2c288c252694ed",
+    "semantic_hash": "7eefdc168b109c009e2c288c252694ed"
+  },
+  "src/pages/TourDetail.jsx": {
+    "mtime": 1779728421.7273476,
+    "seen": 1792612551.9651937,
+    "ast_hash": "8ffaa1e60758516d60581fd5af5b9299",
+    "semantic_hash": "8ffaa1e60758516d60581fd5af5b9299"
+  },
+  "src/router/AppRouter.jsx": {
+    "mtime": 1779673525.6482224,
+    "seen": 1792612551.9651966,
+    "ast_hash": "1e2f8d46ad8ab751086a58e40ba0b6b8",
+    "semantic_hash": "1e2f8d46ad8ab751086a58e40ba0b6b8"
+  },
+  "vercel.json": {
+    "mtime": 1779674131.7300644,
+    "seen": 1792612551.9651995,
+    "ast_hash": "c66e56cc00707871661d3f7a7c4f7426",
+    "semantic_hash": "c66e56cc00707871661d3f7a7c4f7426"
+  },
+  "vite.config.js": {
+    "mtime": 1777846156.7589307,
+    "seen": 1792612551.965202,
+    "ast_hash": "88439104b3c207f17d33ef3160e3b080",
+    "semantic_hash": "88439104b3c207f17d33ef3160e3b080"
+  }
+}

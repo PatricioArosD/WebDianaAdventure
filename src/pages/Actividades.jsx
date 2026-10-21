@@ -7,7 +7,7 @@ import toursEN from '../data/tours_en.json';
 import TourCard from '../components/TourCard';
 
 const Actividades = () => {
-  const { language, t } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
 
   // Elegimos el JSON correcto basado en el idioma actual
   const toursData = language === 'ES' ? toursES : toursEN;
@@ -33,7 +33,7 @@ const Actividades = () => {
 
         {/* SECCIÓN 1 */}
         <div className="mb-5">
-          <h2 className="font-heading fw-bold text-nature-dark mb-4 border-bottom border-2 pb-2" style={{ borderColor: 'var(--nature-green) !important' }}>
+          <h2 className="font-heading fw-bold text-nature-dark mb-4 border-bottom border-2 pb-2" style={{ '--bs-border-color': 'var(--nature-green)' }}>
             {language === 'ES' ? 'Viajes Grupales y Expediciones' : 'Group Trips and Expeditions'}
           </h2>
           <div className="row g-4">
@@ -47,7 +47,7 @@ const Actividades = () => {
 
         {/* SECCIÓN 2 */}
         <div className="mb-5">
-          <h2 className="font-heading fw-bold text-nature-dark mb-4 border-bottom border-2 pb-2" style={{ borderColor: 'var(--nature-green) !important' }}>
+          <h2 className="font-heading fw-bold text-nature-dark mb-4 border-bottom border-2 pb-2" style={{ '--bs-border-color': 'var(--nature-green)' }}>
              {language === 'ES' ? 'Experiencias en Valdivia' : 'Experiences in Valdivia'}
           </h2>
           <div className="row g-4">

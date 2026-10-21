@@ -45,26 +45,28 @@
       "gallery": []
     },
     {
-      "id": "torres-del-paine",
-      "title": "Torres del Paine",
-      "shortDescription": "Group adventure at the end of the world. Connect with the majesty of Patagonia.",
-      "description": "Our local jewel and one of the most spectacular destinations on the planet. This group expedition to Torres del Paine is designed to experience Patagonia in its purest and wildest state. We will hike the iconic trails, admiring ancient glaciers, turquoise lakes, and the imposing granite horns.\n\nUnder the philosophy of Diana Adventure, this trip has a strong focus on regeneration. We will learn about endemic flora and fauna, respecting the delicate ecosystems of the end of the world and sharing with local guides passionate about the conservation of our natural heritage.",
+"id": "torres-del-paine",
+      "title": "Magical Torres del Paine",
+      "duration": "4 days / 3 nights",
+      "shortDescription": "Enjoy an unforgettable experience in the heart of Chilean Patagonia. A trip designed to connect with wild nature.",
+      "description": "Enjoy an unforgettable experience in the heart of Chilean Patagonia. A trip designed to connect with wild nature, hike imposing trails, and contemplate landscapes unique in the world.\n\nMinimum group: 6 passengers.\n\n🗺️ Day-by-Day Itinerary:\n\n• Day 1: Welcome to Patagonia and First Views\nMeeting: Group reception at the Puerto Natales Airport.\nRoute to the park: Direct transfer to Hostería Pehoé, located in the heart of Torres del Paine.\nDaily Activities: Visit to the Cueva del Milodón Natural Monument (subject to opening hours) and Trekking along the Condor Trail, a perfect natural viewpoint for panoramic postcards of the Paine Massif.\n\n• Day 2: Photographic Safari and Paine Viewpoints\nVehicle exploration: Panoramic tour designed to capture the park's contrasts.\nKey points to visit: Grey Beach (views of icebergs), Villa Monzino, Sarmiento Gate, Amarga Lagoon, the impressive Paine Waterfall, and Azul Lagoon.\n\n• Day 3: The Great Challenge (Route to Choose)\nMain Option - Base Torres Trail (High Difficulty): Patagonia's most famous hike. Demanding but rewarding, crowning at the turquoise lagoon at the foot of the imposing monolithic towers.\nAlternative Option - French Valley Trail (Medium/High Difficulty): Hike towards the granite wall amphitheater in the heart of the W circuit. (Note: This option requires the extra catamaran payment at Pehoé Lake).\n\n• Day 4: Wildlife Tracking and Return\nMorning adventure: Hike along the Aonikenk Trail, an area of Patagonian steppe ideal for spotting local wildlife such as guanacos, foxes, and, with luck, the elusive puma.\nFarewell: Return by private transport to the city of Puerto Natales to conclude the services.",
       "includes": [
-        "Air tickets (domestic flights) and transfers",
-        "20kg luggage on flights",
-        "Stay in boutique hotels and equipped Refugios",
-        "Specialized Chilean guide throughout the trip",
-        "Local guide for specific excursions",
-        "Activities, park entrance fees, and tours",
-        "Travel insurance (optional)"
+        "Transfers: Private round-trip transportation from Puerto Natales to the hotel inside the park.",
+        "Route Leader: Certified driver-guide throughout the journey.",
+        "Accommodation: Stay at the iconic Hostería Pehoé with breakfast included.",
+        "Adventures: Daily guided excursions according to the itinerary.",
+        "Trail rations: Daily snacks for the hikes.",
+        "Security: Travel assistance insurance included."
       ],
       "excludes": [
-        "Excess baggage charges on flights",
-        "Tips",
-        "Dinners and lunches (except those detailed in refugios)"
+        "Entrance fees to Torres del Paine National Park and Cueva del Milodón Monument.",
+        "Navigation on Grey Glacier.",
+        "Pehoé Lake catamaran tickets (needed for French Valley option).",
+        "Lunches and dinners.",
+        "Trekking poles or technical clothing."
       ],
       "thumbnail": "/images/Portada-TPaine.jpg",
-      "gallery": ["/images/parque torres 1.jpg", "/images/parque torres 2.jpg", "/images/parque torres 3.jpg", "/images/parque torres 4.jpg", "/images/parque torres 5.jpg", "/images/parque torres 6.jpg", "/images/parque torres 7.jpg", "/images/parque torres 8.jpg"]
+      "gallery": ["/images/parque torres 1.jpg", "/images/parque torres 2.jpg", "/images/parque torres 3.jpg", "/images/parque torres 4.jpg", "/images/parque torres 5.jpg", "/images/parque torres 6.jpg", "/images/parque torres 7.jpg"]
     },
     {
       "id": "japon",

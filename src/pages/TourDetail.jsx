@@ -10,8 +10,7 @@ const TourDetail = () => {
   const { language, t } = useContext(LanguageContext);
   
   const toursData = language === 'ES' ? toursES : toursEN;
-  const allTours = [...(toursData.grupales || []), ...(toursData.valdivia || [])];
-  const tour = allTours.find(t => t.id === id);
+  const tour = (toursData[categoria] || []).find(x => x.id === id);
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 

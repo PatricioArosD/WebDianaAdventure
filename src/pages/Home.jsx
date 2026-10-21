@@ -159,7 +159,7 @@ const Home = () => {
             {/* Columna Izquierda: Foto del guía */}
             <div className="col-lg-6 mb-4 mb-lg-0">
               <div className="position-relative shadow-lg">
-// En src/pages/Home.jsx, dentro de la columna izquierda
+
 <img 
   src="/images/guia_rodrigo.jpg" 
   alt="Guía Rodrigo Diana Adventure" 
@@ -173,18 +173,16 @@ const Home = () => {
             {/* Columna Derecha: Texto completo (Ahora en blanco) */}
             <div className="col-lg-6 ps-lg-5">
               <h2 className="font-heading fw-bold text-white mb-4 pb-2" style={{ borderBottom: '2px solid var(--nature-green)', display: 'inline-block' }}>
-                {t.home?.guideTitle || (language === 'ES' ? 'Nuestro Guía' : 'Our Guide')}
+                {t.home.guideTitle}
               </h2>
               {/* Cambiamos el texto a 'text-light' con un poco de opacidad para no cansar la vista */}
               <p className="text-light opacity-75 mb-4 font-body" style={{ lineHeight: '1.8', fontSize: '1.05rem', textAlign: 'justify' }}>
-                {t.home?.guideText || (language === 'ES' 
-                  ? 'Guía de Turismo con más de 10 años de experiencia internacional y sólida especialización en interpretación de flora y fauna, conservación y aviturismo. Con una sólida disciplina y excelente condición física forjada a través de la práctica de múltiples deportes a lo largo de mi vida, lidero con éxito expediciones en destinos de alta exigencia como San Pedro de Atacama y Torres del Paine. Combino habilidades avanzadas de seguridad en terreno (certificación WFR) con un perfil bilingüe (inglés/portugués), enfocado en la educación ambiental.' 
-                  : 'Tour Guide with over 10 years of international experience and a strong specialization in flora and fauna interpretation, conservation, and birdwatching. With solid discipline and excellent physical condition forged through multiple sports throughout my life, I successfully lead expeditions in highly demanding destinations such as San Pedro de Atacama and Torres del Paine. I combine advanced field safety skills (WFR certification) with a bilingual profile (English/Portuguese), focused on environmental education.')}
+                {t.home.guideText}
               </p>
               {/* Cambiamos el botón oscuro por el botón verde principal para que contraste con el fondo */}
-              <a href="/nosotros#equipo" className="btn btn-nature rounded-0 px-4 py-2 font-heading fw-bold shadow-sm">
-                {t.home?.guideBtn || (language === 'ES' ? 'Conocer al equipo' : 'Meet the team')} <i className="bi bi-arrow-right ms-2"></i>
-              </a>
+              <Link to="/nosotros#equipo" className="btn btn-nature rounded-0 px-4 py-2 font-heading fw-bold shadow-sm">
+                {t.home.guideBtn} <i className="bi bi-arrow-right ms-2"></i>
+              </Link>
             </div>
             
           </div>

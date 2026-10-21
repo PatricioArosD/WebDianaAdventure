@@ -1,10 +1,17 @@
 // src/pages/Nosotros.jsx
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
 
 const Nosotros = () => {
   const { t } = useContext(LanguageContext);
+  const { hash } = useLocation();
+
+  // React Router no hace scroll a anclas (#equipo) por sí solo
+  useEffect(() => {
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    else window.scrollTo(0, 0);
+  }, [hash]);
 
   return (
     <div className="nosotros-page" style={{ backgroundColor: 'var(--nature-bg)', minHeight: '100vh' }}>
@@ -20,13 +27,13 @@ const Nosotros = () => {
       <div className="container mb-5">
         <div className="row g-4 justify-content-center">
           <div className="col-md-5">
-            <div className="bg-white p-5 h-100 shadow-sm border-0 border-top border-4" style={{ borderColor: 'var(--nature-green) !important' }}>
+            <div className="bg-white p-5 h-100 shadow-sm border-0 border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)' }}>
               <h3 className="font-heading fw-bold text-nature-green mb-4">{t.about.visionTitle}</h3>
               <p className="text-secondary" style={{ lineHeight: '1.8' }}>{t.about.visionText}</p>
             </div>
           </div>
           <div className="col-md-5">
-            <div className="bg-white p-5 h-100 shadow-sm border-0 border-top border-4" style={{ borderColor: 'var(--nature-green) !important' }}>
+            <div className="bg-white p-5 h-100 shadow-sm border-0 border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)' }}>
               <h3 className="font-heading fw-bold text-nature-green mb-4">{t.about.missionTitle}</h3>
               <p className="text-secondary" style={{ lineHeight: '1.8' }}>{t.about.missionText}</p>
             </div>

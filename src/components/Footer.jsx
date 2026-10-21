@@ -7,11 +7,15 @@ const Footer = () => {
   const { t } = useContext(LanguageContext);
 
   return (
-    <footer className="footer-bg text-white pt-5 pb-3 mt-auto border-top border-4" style={{ borderColor: 'var(--nature-green) !important' }}>
+    <footer className="footer-bg text-white pt-5 pb-3 mt-auto border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)' }}>
       <div className="container mt-4">
         <div className="row g-4">
           <div className="col-md-4 mb-4">
-            <h5 className="font-heading fw-bold mb-4 fs-4 text-outline-black">Diana Adventure</h5>
+            <h5 className="font-heading fw-bold mb-4 fs-4 text-outline-black"><img 
+            src="/images/logo-gato.png" 
+            alt="Diana Adventure Logo" 
+            style={{ height: '75px', width: 'auto', objectFit: 'contain' }} 
+          />Diana Adventure</h5>
             <ul className="list-unstyled font-body">
               <li className="mb-2"><Link to="/nosotros" className="footer-link">{t.footer.aboutUs}</Link></li>
               <li className="mb-2"><Link to="/nuestras-actividades" className="footer-link">{t.footer.activities}</Link></li>
@@ -23,7 +27,7 @@ const Footer = () => {
             <ul className="list-unstyled font-body">
               <li className="mb-2"><Link to="#" className="footer-link">{t.footer.faq}</Link></li>
               <li className="mb-2"><Link to="/terminos" className="footer-link">{t.footer.terms}</Link></li>
-              <li className="mb-2"><Link to="#" className="footer-link">{t.footer.privacy}</Link></li>
+              <li className="mb-2"><Link to="/terminos" className="footer-link">{t.footer.privacy}</Link></li>
             </ul>
           </div>
           <div className="col-md-4 mb-4">

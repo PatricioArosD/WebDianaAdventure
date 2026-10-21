@@ -1,5 +1,5 @@
 // src/router/AppRouter.jsx
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from '../pages/Home';
 import Actividades from '../pages/Actividades'; // Nueva página unificada
 import TourDetail from '../pages/TourDetail';
@@ -9,6 +9,8 @@ import Terminos from '../pages/Terminos';
 
 
 export const AppRouter = () => {
+  const location = useLocation();
+
   return (
     <Routes>
       <Route path="/terminos" element={<Terminos />} />
@@ -16,7 +18,8 @@ export const AppRouter = () => {
       <Route path="/nuestras-actividades" element={<Actividades />} />
       <Route path="/tour/:categoria/:id" element={<TourDetail />} />
       <Route path="/nosotros" element={<Nosotros />} />
-      <Route path="/contacto" element={<Contacto />} />
+      <Route path="/contacto" element={<Contacto key={location.key} />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

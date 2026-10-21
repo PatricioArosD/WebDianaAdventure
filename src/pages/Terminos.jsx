@@ -1,9 +1,7 @@
 // src/pages/Terminos.jsx
-import { useEffect, useContext } from 'react';
-import { LanguageContext } from '../context/LanguageContext';
+import { useEffect } from 'react';
 
 const Terminos = () => {
-  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -11,7 +9,7 @@ const Terminos = () => {
 
   return (
     <div className="terminos-page" style={{ backgroundColor: 'var(--nature-bg)', minHeight: '100vh', paddingTop: '120px', paddingBottom: '80px' }}>
-      <div className="container bg-white p-4 p-md-5 shadow-sm rounded-1 border-top border-4" style={{ borderColor: 'var(--nature-green) !important', maxWidth: '900px' }}>
+      <div className="container bg-white p-4 p-md-5 shadow-sm rounded-1 border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)', maxWidth: '900px' }}>
         
         <h1 className="font-heading fw-bold text-nature-dark mb-3 text-center">Términos, Condiciones y Políticas de Servicio</h1>
         <p className="text-center text-muted font-body mb-5">Excursiones y Viajes Grupales – Región de Los Ríos, Chile</p>

@@ -1,11 +1,16 @@
 // src/components/Header.jsx
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
 
 const Header = () => {
   const location = useLocation();
   const isHome = location.pathname === '/';
+
+  // El collapse de Bootstrap no se entera de la navegación de React Router
+  useEffect(() => {
+    document.getElementById('navbarNav')?.classList.remove('show');
+  }, [location.pathname]);
   
   // Extraemos las herramientas del contexto
   const { language, toggleLanguage, t } = useContext(LanguageContext);
@@ -22,11 +27,16 @@ const Header = () => {
     <nav className={navClasses} style={navStyle}>
       <div className="container">
         
-        <NavLink className="navbar-brand d-flex align-items-center text-white" to="/">
+        <NavLink className="navbar-brand d-flex align-items-center text-white gap-2" to="/">
+          <img 
+            src="/images/logo-gato.png" 
+            alt="Diana Adventure Logo" 
+            style={{ height: '75px', width: 'auto', objectFit: 'contain' }} 
+          />
           <span className="fw-bold fs-3 font-heading text-uppercase text-outline-black">Diana Adventure Chile</span>
         </NavLink>
 
-        <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Abrir menú">
           <span className="navbar-toggler-icon"></span>
         </button>
 
