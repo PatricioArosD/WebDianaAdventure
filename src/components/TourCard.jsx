@@ -19,7 +19,7 @@ const TourCard = ({ tour, categoria }) => {
       )}
 
       <div className="position-relative">
-        <img src={tour.thumbnail} className="tour-card-img" alt={tour.title} />
+        <img src={tour.thumbnail} className="tour-card-img" alt={tour.title} loading="lazy" />
         <div className="position-absolute w-100 text-center" style={{ top: '20px' }}>
            <h4 className="text-white font-heading fw-bold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)' }}>{tour.title}</h4>
         </div>

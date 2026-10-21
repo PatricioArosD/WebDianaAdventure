@@ -26,7 +26,7 @@ const TourDetail = () => {
   return (
     <div className="tour-detail-page" style={{ backgroundColor: 'var(--nature-bg)', minHeight: '100vh', paddingBottom: '80px' }}>
       <div className="position-relative d-flex align-items-center justify-content-center" style={{ height: '65vh', minHeight: '400px', backgroundColor: 'var(--nature-dark)' }}>
-        <img src={tour.thumbnail} alt={tour.title} className="position-absolute w-100 h-100 object-fit-cover" />
+        <img src={tour.thumbnail} alt={tour.title} className="position-absolute w-100 h-100 object-fit-cover" fetchPriority="high" />
         <div className="position-absolute top-0 start-0 w-100 h-100" style={{ backgroundColor: 'rgba(31, 44, 35, 0.5)' }}></div>
         <div className="position-relative z-2 text-center mt-5">
           <h1 className="display-2 font-heading fw-bold text-white text-outline-black">{tour.title}</h1>
@@ -48,7 +48,7 @@ const TourDetail = () => {
                   {tour.gallery.map((imgSrc, index) => (
                     <div className="col-md-6" key={index}>
                       <div className="gallery-img-wrapper shadow-sm h-100 rounded-1">
-                        <img src={imgSrc} alt="Gallery" className="img-fluid w-100 gallery-img-zoom" style={{ height: '250px', objectFit: 'cover' }}/>
+                        <img src={imgSrc} alt={tour.title} loading="lazy" className="img-fluid w-100 gallery-img-zoom" style={{ height: '250px', objectFit: 'cover' }}/>
                       </div>
                     </div>
                   ))}

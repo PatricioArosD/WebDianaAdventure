@@ -45,7 +45,7 @@ const Home = () => {
       <div className="position-relative d-flex align-items-center" style={{ 
           height: '85vh', 
           minHeight: '600px',
-          backgroundImage: 'url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&q=80&w=2070")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
@@ -84,12 +84,12 @@ const Home = () => {
                 <div className="card border-0 rounded-0 shadow h-100 overflow-hidden">
                   <div className="position-relative">
                     <img 
-                      src={tour.thumbnail || "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=500"} 
+                      src={tour.thumbnail || "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&q=80&w=500"} 
                       className="tour-card-img" 
                       alt={tour.title}
                       onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=500";
+                        e.target.src = "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&q=80&w=500";
                       }} 
                     />
                     <div className="position-absolute w-100 text-center" style={{ top: '20px' }}>
@@ -133,11 +133,11 @@ const Home = () => {
           <div className="col-lg-6 offset-lg-1">
             <div className="row g-2">
               <div className="col-8">
-                <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=600" className="img-fluid w-100 h-100 object-fit-cover shadow-sm" alt="Naturaleza 1" style={{ minHeight: '300px' }}/>
+                <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&q=80&w=600" className="img-fluid w-100 h-100 object-fit-cover shadow-sm" alt="Naturaleza 1" loading="lazy" style={{ minHeight: '300px' }}/>
               </div>
               <div className="col-4 d-flex flex-column gap-2">
-                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?q=80&w=300" className="img-fluid w-100 object-fit-cover shadow-sm" alt="Naturaleza 2" style={{ height: '145px' }}/>
-                <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?q=80&w=300" className="img-fluid w-100 object-fit-cover shadow-sm" alt="Ciervo" style={{ height: '145px' }}/>
+                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&q=80&w=300" className="img-fluid w-100 object-fit-cover shadow-sm" alt="Naturaleza 2" loading="lazy" style={{ height: '145px' }}/>
+                <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&q=80&w=300" className="img-fluid w-100 object-fit-cover shadow-sm" alt="Ciervo" loading="lazy" style={{ height: '145px' }}/>
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@ const Home = () => {
 
       <div className="container-fluid py-5 my-5 position-relative" style={{
         // Reemplaza la URL por otra imagen de bosque/montaña si lo deseas
-        backgroundImage: 'linear-gradient(rgba(31, 44, 35, 0.85), rgba(31, 44, 35, 0.9)), url("https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2000")',
+        backgroundImage: 'linear-gradient(rgba(31, 44, 35, 0.85), rgba(31, 44, 35, 0.9)), url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&q=80&w=2000")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed' // Esto crea el efecto de que el fondo se queda quieto al hacer scroll
@@ -163,8 +163,9 @@ const Home = () => {
 <img 
   src="/images/guia_rodrigo.jpg" 
   alt="Guía Rodrigo Diana Adventure" 
+  loading="lazy"
   className="img-cover-full shadow-lg" // <- Reemplazamos 'img-fluid' por nuestra nueva clase.
-  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800"; }}
+  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&q=80&w=800"; }}
 />
                 <div className="position-absolute bottom-0 start-0 w-50" style={{ height: '6px', backgroundColor: 'var(--nature-green)' }}></div>
               </div>
