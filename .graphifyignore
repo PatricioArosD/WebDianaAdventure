@@ -1,0 +1,6 @@
+# Ruido para el grafo: binarios, assets de plantilla Vite y README genérico
+public/
+src/assets/
+README.md
+package-lock.json
+dist/

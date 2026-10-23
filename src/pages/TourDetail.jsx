@@ -1,6 +1,6 @@
 // src/pages/TourDetail.jsx
 import { useParams, Link } from 'react-router-dom';
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { LanguageContext } from '../context/LanguageContext';
 import toursES from '../data/tours_es.json';
 import toursEN from '../data/tours_en.json';
@@ -8,6 +8,9 @@ import toursEN from '../data/tours_en.json';
 const TourDetail = () => {
   const { categoria, id } = useParams();
   const { language, t } = useContext(LanguageContext);
+  
+  // Estado para controlar la imagen seleccionada para el popup
+  const [selectedImage, setSelectedImage] = useState(null);
   
   const toursData = language === 'ES' ? toursES : toursEN;
   const tour = (toursData[categoria] || []).find(x => x.id === id);
@@ -24,90 +27,122 @@ const TourDetail = () => {
   }
 
   return (
-    <div className="tour-detail-page" style={{ backgroundColor: 'var(--nature-bg)', minHeight: '100vh', paddingBottom: '80px' }}>
-      <div className="position-relative d-flex align-items-center justify-content-center" style={{ height: '65vh', minHeight: '400px', backgroundColor: 'var(--nature-dark)' }}>
-        <img src={tour.thumbnail} alt={tour.title} className="position-absolute w-100 h-100 object-fit-cover" fetchPriority="high" />
-        <div className="position-absolute top-0 start-0 w-100 h-100" style={{ backgroundColor: 'rgba(31, 44, 35, 0.5)' }}></div>
-        <div className="position-relative z-2 text-center mt-5">
-          <h1 className="display-2 font-heading fw-bold text-white text-outline-black">{tour.title}</h1>
-        </div>
-      </div>
-
-      <div className="container mt-5">
-        <div className="row g-5">
-          <div className="col-lg-8">
-            <h3 className="font-heading fw-bold text-nature-green mb-4 border-bottom border-secondary border-opacity-25 pb-3">
-              {t.ui.aboutAdventure}
-            </h3>
-            <p className="fs-5 text-secondary font-body mb-5" style={{ lineHeight: '1.9', whiteSpace: 'pre-line' }}>{tour.description}</p>
-
-            {tour.gallery && tour.gallery.length > 0 && (
-              <div className="mt-5">
-                <h4 className="font-heading fw-bold text-nature-dark mb-4">{t.ui.postcards}</h4>
-                <div className="row g-3">
-                  {tour.gallery.map((imgSrc, index) => (
-                    <div className="col-md-6" key={index}>
-                      <div className="gallery-img-wrapper shadow-sm h-100 rounded-1">
-                        <img src={imgSrc} alt={tour.title} loading="lazy" className="img-fluid w-100 gallery-img-zoom" style={{ height: '250px', objectFit: 'cover' }}/>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
+    <>
+      <div className="tour-detail-page" style={{ backgroundColor: 'var(--nature-bg)', minHeight: '100vh', paddingBottom: '80px' }}>
+        <div className="position-relative d-flex align-items-center justify-content-center" style={{ height: '65vh', minHeight: '400px', backgroundColor: 'var(--nature-dark)' }}>
+          <img src={tour.thumbnail} alt={tour.title} className="position-absolute w-100 h-100 object-fit-cover" fetchPriority="high" />
+          <div className="position-absolute top-0 start-0 w-100 h-100" style={{ backgroundColor: 'rgba(31, 44, 35, 0.5)' }}></div>
+          <div className="position-relative z-2 text-center mt-5">
+            <h1 className="display-2 font-heading fw-bold text-white text-outline-black">{tour.title}</h1>
           </div>
+        </div>
 
-          <div className="col-lg-4">
-            <div className="card border-0 shadow-lg rounded-0 bg-white sticky-top" style={{ top: '120px', zIndex: 1 }}>
-              <div className="card-body p-4 p-lg-5">
-                {tour.duration && (
-                  <div className="mb-4 text-center border-bottom pb-3">
-                    <i className="bi bi-clock-history fs-3 text-nature-green mb-2"></i>
-                    <h6 className="fw-bold font-heading m-0">{t.ui.duration}</h6>
-                    <p className="text-muted small m-0">{tour.duration}</p>
+        <div className="container mt-5">
+          <div className="row g-5">
+            <div className="col-lg-8">
+              <h3 className="font-heading fw-bold text-nature-green mb-4 border-bottom border-secondary border-opacity-25 pb-3">
+                {t.ui.aboutAdventure}
+              </h3>
+              <p className="fs-5 text-secondary font-body mb-5" style={{ lineHeight: '1.9', whiteSpace: 'pre-line' }}>{tour.description}</p>
+
+              {tour.gallery && tour.gallery.length > 0 && (
+                <div className="mt-5">
+                  <h4 className="font-heading fw-bold text-nature-dark mb-4">{t.ui.postcards}</h4>
+                  <div className="row g-3">
+                    {tour.gallery.map((imgSrc, index) => (
+                      <div className="col-md-6" key={index}>
+                        <div className="gallery-img-wrapper shadow-sm h-100 rounded-1">
+                          <img 
+                            src={imgSrc} 
+                            alt={tour.title} 
+                            loading="lazy" 
+                            className="img-fluid w-100 gallery-img-zoom" 
+                            style={{ height: '250px', objectFit: 'cover', cursor: 'zoom-in' }}
+                            onClick={() => setSelectedImage(imgSrc)}
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                )}
-                {tour.includes && tour.includes.length > 0 && (
-                  <div className="mb-4">
-                    <h5 className="font-heading fw-bold text-nature-green mb-3"><i className="bi bi-check-circle-fill me-2"></i>{t.ui.includes}</h5>
-                    <ul className="list-unstyled text-secondary small">
-                      {tour.includes.map((item, index) => (
-                        <li key={index} className="mb-2 d-flex align-items-start"><i className="bi bi-dot text-nature-green fs-5 me-1"></i><span>{item}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                {tour.excludes && tour.excludes.length > 0 && (
-                  <div className="mb-4">
-                    <h5 className="font-heading fw-bold text-danger mb-3"><i className="bi bi-x-circle-fill me-2"></i>{t.ui.excludes}</h5>
-                    <ul className="list-unstyled text-secondary small">
-                      {tour.excludes.map((item, index) => (
-                        <li key={index} className="mb-2 d-flex align-items-start"><i className="bi bi-dot text-danger fs-5 me-1"></i><span>{item}</span></li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                <div className="mt-5 text-center">
-                  <p className="font-body fw-bold text-nature-dark mb-2">{t.ui.readyToTravel}</p>
-                  
-                  {/* Bloqueo del botón para viajes grupales */}
-                  {categoria === 'grupales' ? (
-                    <button className="btn btn-secondary rounded-0 w-100 py-3 shadow-sm" disabled style={{ cursor: 'not-allowed' }}>
-                      {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
-                    </button>
-                  ) : (
-                    <Link to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">
-                      {t.ui.bookNow}
-                    </Link>
+                </div>
+              )}
+            </div>
+
+            <div className="col-lg-4">
+              <div className="card border-0 shadow-lg rounded-0 bg-white sticky-top" style={{ top: '120px', zIndex: 1 }}>
+                <div className="card-body p-4 p-lg-5">
+                  {tour.duration && (
+                    <div className="mb-4 text-center border-bottom pb-3">
+                      <i className="bi bi-clock-history fs-3 text-nature-green mb-2"></i>
+                      <h6 className="fw-bold font-heading m-0">{t.ui.duration}</h6>
+                      <p className="text-muted small m-0">{tour.duration}</p>
+                    </div>
                   )}
+                  {tour.includes && tour.includes.length > 0 && (
+                    <div className="mb-4">
+                      <h5 className="font-heading fw-bold text-nature-green mb-3"><i className="bi bi-check-circle-fill me-2"></i>{t.ui.includes}</h5>
+                      <ul className="list-unstyled text-secondary small">
+                        {tour.includes.map((item, index) => (
+                          <li key={index} className="mb-2 d-flex align-items-start"><i className="bi bi-dot text-nature-green fs-5 me-1"></i><span>{item}</span></li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {tour.excludes && tour.excludes.length > 0 && (
+                    <div className="mb-4">
+                      <h5 className="font-heading fw-bold text-danger mb-3"><i className="bi bi-x-circle-fill me-2"></i>{t.ui.excludes}</h5>
+                      <ul className="list-unstyled text-secondary small">
+                        {tour.excludes.map((item, index) => (
+                          <li key={index} className="mb-2 d-flex align-items-start"><i className="bi bi-dot text-danger fs-5 me-1"></i><span>{item}</span></li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="mt-5 text-center">
+                    <p className="font-body fw-bold text-nature-dark mb-2">{t.ui.readyToTravel}</p>
+                    
+                    {/* Bloqueo del botón para viajes grupales */}
+                    {categoria === 'grupales' ? (
+                      <button className="btn btn-secondary rounded-0 w-100 py-3 shadow-sm" disabled style={{ cursor: 'not-allowed' }}>
+                        {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
+                      </button>
+                    ) : (
+                      <Link to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">
+                        {t.ui.bookNow}
+                      </Link>
+                    )}
 
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      {/* POPUP / MODAL DEL VISOR DE IMÁGENES */}
+      {selectedImage && (
+        <div 
+          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" 
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.9)', zIndex: 9999, cursor: 'zoom-out' }}
+          onClick={() => setSelectedImage(null)}
+        >
+          <button 
+            className="btn-close btn-close-white position-absolute top-0 end-0 m-4" 
+            onClick={() => setSelectedImage(null)}
+            aria-label="Cerrar"
+          ></button>
+          
+          <img 
+            src={selectedImage} 
+            alt="Visor ampliado" 
+            className="img-fluid rounded shadow-lg" 
+            style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain', cursor: 'default' }}
+            onClick={(e) => e.stopPropagation()} 
+          />
+        </div>
+      )}
+    </>
   );
 };
 
