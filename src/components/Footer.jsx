@@ -37,9 +37,8 @@ const Footer = () => {
               <li className="mb-4 text-outline-black"><i className="bi bi-geo-alt me-2"></i> Los Andes, Chile</li>
             </ul>
             <div className="d-flex gap-3">
-              <a href="#" className="text-white fs-4 text-outline-black"><i className="bi bi-facebook"></i></a>
-              <a href="#" className="text-white fs-4 text-outline-black"><i className="bi bi-instagram"></i></a>
-              <a href="#" className="text-white fs-4 text-outline-black"><i className="bi bi-whatsapp"></i></a>
+              <a href="https://www.instagram.com/diana__adventure/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white fs-4 text-outline-black"><i className="bi bi-instagram"></i></a>
+              <a href="https://wa.me/56984799231" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-white fs-4 text-outline-black"><i className="bi bi-whatsapp"></i></a>
             </div>
           </div>
         </div>
