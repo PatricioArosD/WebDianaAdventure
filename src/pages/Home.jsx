@@ -192,45 +192,12 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* 4. SECCIÓN: TESTIMONIOS */}
+      {/* 4. FRANJA DE RESERVA */}
       <div className="container-fluid py-5 mt-5 border-top border-bottom" style={{ backgroundColor: '#EBE8DF' }}>
-        <div className="container text-center">
-          <h3 className="font-heading fw-bold mb-5">
-            {language === 'ES' ? 'Ellos Hablan de Nosotros' : 'What They Say About Us'}
-          </h3>
-          
-          <div className="row justify-content-center g-4">
-            <div className="col-md-5">
-              <div className="bg-white p-4 shadow-sm h-100 rounded-1 position-relative">
-                <i className="bi bi-quote fs-1 text-muted opacity-25 position-absolute top-0 start-0 ms-3 mt-2"></i>
-                <p className="fst-italic mt-3">
-                  {language === 'ES' 
-                    ? '"¡Una experiencia increíble! Guías apasionados y paisajes que te quitan el aliento."' 
-                    : '"An incredible experience! Passionate guides and breathtaking landscapes."'}
-                </p>
-                <hr className="w-25 mx-auto" />
-                <p className="fw-bold font-heading mb-0 text-end">— Constanza L.</p>
-              </div>
-            </div>
-            <div className="col-md-5">
-              <div className="bg-white p-4 shadow-sm h-100 rounded-1 position-relative">
-                <i className="bi bi-quote fs-1 text-muted opacity-25 position-absolute top-0 start-0 ms-3 mt-2"></i>
-                <p className="fst-italic mt-3">
-                  {language === 'ES' 
-                    ? '"Una aventura inolvidable. El birdwatching en Valdivia superó mis expectativas, para repetir."' 
-                    : '"An unforgettable adventure. Birdwatching in Valdivia exceeded my expectations, would definitely repeat."'}
-                </p>
-                <hr className="w-25 mx-auto" />
-                <p className="fw-bold font-heading mb-0 text-end">— Rodrigo D.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-5">
-            <Link to="/contacto" className="btn btn-nature rounded-0 px-5">
-              {language === 'ES' ? 'RESERVAR AHORA' : 'BOOK NOW'}
-            </Link>
-          </div>
+        <div className="container text-center py-3" style={{ maxWidth: '720px' }}>
+          <h2 className="h3 font-heading fw-bold mb-3">{t.home.ctaTitle}</h2>
+          <p className="font-body mb-4" style={{ lineHeight: '1.8' }}>{t.home.ctaText}</p>
+          <Link to="/contacto" className="btn btn-nature rounded-0 px-5">{t.ui.bookNow}</Link>
         </div>
       </div>
 

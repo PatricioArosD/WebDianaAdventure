@@ -12,7 +12,9 @@ export const translations = {
       guideTitle: "Nuestro Guía",
       guideText: "Guía de Turismo con más de 10 años de experiencia internacional y sólida especialización en interpretación de flora y fauna, conservación y aviturismo. Con una sólida disciplina y excelente condición física forjada a través de la práctica de múltiples deportes a lo largo de mi vida, lidero con éxito expediciones en destinos de alta exigencia como San Pedro de Atacama y Torres del Paine. Combino habilidades avanzadas de seguridad en terreno (certificación WFR) con un perfil bilingüe (inglés/portugués), enfocado en la educación ambiental.",
       guideBtn: "Conocer al equipo",
-      collageAlts: ["Costa del Parque Oncol", "Martín pescador en Valdivia", "Alerce milenario"]
+      collageAlts: ["Costa del Parque Oncol", "Martín pescador en Valdivia", "Alerce milenario"],
+      ctaTitle: "Arma tu salida en Valdivia",
+      ctaText: "Cuéntanos qué excursión te interesa, la fecha y cuántos son. Te respondemos con la disponibilidad y una cotización para tu grupo."
     },
     footer: {
       aboutUs: "¿Quiénes somos?",
@@ -131,7 +133,9 @@ export const translations = {
       guideTitle: "Our Guide",
       guideText: "Tour Guide with over 10 years of international experience and a strong specialization in flora and fauna interpretation, conservation, and birdwatching. With solid discipline and excellent physical condition forged through multiple sports throughout my life, I successfully lead expeditions in highly demanding destinations such as San Pedro de Atacama and Torres del Paine. I combine advanced field safety skills (WFR certification) with a bilingual profile (English/Portuguese), focused on environmental education.",
       guideBtn: "Meet the team",
-      collageAlts: ["Oncol Park coastline", "Ringed kingfisher in Valdivia", "Ancient alerce tree"]
+      collageAlts: ["Oncol Park coastline", "Ringed kingfisher in Valdivia", "Ancient alerce tree"],
+      ctaTitle: "Plan your outing in Valdivia",
+      ctaText: "Tell us which tour you are interested in, the date and how many of you there are. We will reply with availability and a quote for your group."
     },
     footer: {
       aboutUs: "Who are we?",
