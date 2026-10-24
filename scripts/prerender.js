@@ -9,8 +9,8 @@ import { translations } from '../src/data/translations.js';
 // Con www: el dominio sin www redirige (308) aquí, y un canonical que redirige es ignorado por Google
 const SITE_URL = (process.env.SITE_URL || 'https://www.dianaadventurechile.com').replace(/\/$/, '');
 const DIST = new URL('../dist/', import.meta.url);
-const HERO_IMG = 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&q=80&w=2070';
-const DEFAULT_IMG = '/images/portada-birdwaching.jpg';
+const HERO_IMG = '/images/montana_toribio_1.jpg';
+const DEFAULT_IMG = '/images/portada-birdwatching.jpg';
 
 const tours = JSON.parse(readFileSync(new URL('../src/data/tours_es.json', import.meta.url), 'utf8'));
 const t = translations.ES;
