@@ -56,6 +56,22 @@ export const translations = {
       ctaDesc: "¿Listo para unirte a nuestra próxima expedición?",
       ctaBtn: "VER NUESTRAS ACTIVIDADES"
     },
+    faq: {
+      title: "Preguntas Frecuentes",
+      subtitle: "Lo que más nos preguntan antes de salir a la aventura.",
+      items: [
+        { q: "¿Cómo reservo una excursión?", a: "Escríbenos a través del formulario de contacto o a hola@dianaadventure.cl indicando la excursión, la fecha y el número de personas. Toda reserva se confirma por escrito vía correo electrónico." },
+        { q: "¿Qué medios de pago aceptan y cuándo debo pagar?", a: "Aceptamos transferencia bancaria o efectivo, coordinado previamente. En ambos casos, el 100% del valor debe estar pagado con al menos 24 horas de anticipación al inicio de la actividad; de lo contrario, la reserva se anula automáticamente." },
+        { q: "¿Desde dónde parten las excursiones?", a: "Todas parten desde un punto de encuentro en Valdivia, que te confirmamos por correo al reservar. Esperamos un máximo de 15 minutos; pasado ese tiempo, la reserva se considera No Show." },
+        { q: "¿Necesito experiencia previa?", a: "Depende de la excursión. El Birdwatching en kayak es de dificultad baja y apto para principiantes, y el hiking en Parque Oncol se hace a ritmo pausado. El Alerce Costero recorre un sendero de 2,4 km. El Pico Toribio es de alta exigencia: 4,5 km de subida con fuerte desnivel hasta los 1.311 msnm." },
+        { q: "¿Hay límite de edad?", a: "Sí. Por seguridad, aceptamos participantes de entre 5 y 75 años. Los menores de 18 años deben ir acompañados por un adulto responsable." },
+        { q: "¿Qué debo llevar?", a: "Ropa por capas, chaqueta impermeable, calzado de trekking (de caña alta para el Pico Toribio), bloqueador solar y anteojos de sol. Para el kayak, trae ropa de cambio y calzado que se pueda mojar. Nosotros ponemos bastones, binoculares y, en kayak, chalecos salvavidas." },
+        { q: "¿El picnic se adapta a dietas especiales?", a: "Sí. Tenemos opciones vegetarianas, veganas y sin gluten si nos avisas al momento de reservar. Infórmanos también de cualquier alergia alimentaria." },
+        { q: "¿En qué idiomas son las excursiones?", a: "Nuestro guía habla español, inglés y portugués." },
+        { q: "¿Operan todo el año? ¿Qué pasa si llueve?", a: "Sí, operamos todo el año. La Región de Los Ríos es lluviosa, así que con mal tiempo podemos cambiar la ruta por una alternativa segura de igual duración. Si las condiciones son peligrosas y no hay alternativa, suspendemos la actividad y te devolvemos el 100% del pago." },
+        { q: "¿Qué pasa si necesito cancelar?", a: "Avísanos por correo. Con más de 48 horas de anticipación te devolvemos el 50%; entre 48 y 24 horas, el 20%. Con menos de 24 horas o si no te presentas, no hay reembolso." }
+      ]
+    },
     contact: {
       title: "Planifiquemos tu próxima aventura",
       subtitle: "Ya sea que quieras sumergirte en los bosques de Valdivia o explorar el fin del mundo, estamos aquí para guiarte.",
@@ -145,6 +161,22 @@ export const translations = {
       constanzaText: "Data Scientist bringing structure and analytical vision. Beyond data, she has a deep creative side: she enjoys drawing, anime, urban trekking, and having 'tea' in every new corner of the world.",
       ctaDesc: "Ready to join our next expedition?",
       ctaBtn: "VIEW OUR ACTIVITIES"
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      subtitle: "What people ask us most before heading out on an adventure.",
+      items: [
+        { q: "How do I book a tour?", a: "Write to us through the contact form or at hola@dianaadventure.cl with the tour, date and number of people. Every booking is confirmed in writing by email." },
+        { q: "What payment methods do you accept, and when do I pay?", a: "We accept bank transfer or cash, arranged in advance. Either way, 100% of the price must be paid at least 24 hours before the activity starts; otherwise, the booking is automatically cancelled." },
+        { q: "Where do the tours start?", a: "All tours start from a meeting point in Valdivia, which we confirm by email when you book. We wait a maximum of 15 minutes; after that, the booking counts as a No Show." },
+        { q: "Do I need previous experience?", a: "It depends on the tour. Kayak Birdwatching is low difficulty and suitable for beginners, and the Oncol Park hike goes at a relaxed pace. The Coastal Alerce trail is 2.4 km long. Toribio Peak is highly demanding: a 4.5 km steep climb up to 1,311 m above sea level." },
+        { q: "Is there an age limit?", a: "Yes. For safety reasons, we accept participants aged 5 to 75. Anyone under 18 must be accompanied by a responsible adult." },
+        { q: "What should I bring?", a: "Layered clothing, a waterproof jacket, hiking boots (high-top for Toribio Peak), sunscreen and sunglasses. For kayaking, bring a change of clothes and shoes that can get wet. We provide trekking poles, binoculars and, for kayaking, life jackets." },
+        { q: "Can the picnic accommodate special diets?", a: "Yes. We offer vegetarian, vegan and gluten-free options if you let us know when booking. Please also tell us about any food allergies." },
+        { q: "What languages are the tours in?", a: "Our guide speaks Spanish, English and Portuguese." },
+        { q: "Do you operate all year? What if it rains?", a: "Yes, we operate all year round. The Los Ríos Region is rainy, so in bad weather we may switch to a safe alternative route of the same length. If conditions are dangerous and there is no alternative, we cancel the activity and refund 100% of your payment." },
+        { q: "What if I need to cancel?", a: "Let us know by email. More than 48 hours in advance, we refund 50%; between 48 and 24 hours, 20%. With less than 24 hours' notice or if you don't show up, there is no refund." }
+      ]
     },
     contact: {
       title: "Let's plan your next adventure",

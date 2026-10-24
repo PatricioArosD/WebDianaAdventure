@@ -1,14 +1,43 @@
 // src/pages/Terminos.jsx
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { LanguageContext } from '../context/LanguageContext';
 
 const Terminos = () => {
+  const { t } = useContext(LanguageContext);
+  const { hash } = useLocation();
 
+  // React Router no hace scroll a anclas (#faq) por sí solo
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+    else window.scrollTo(0, 0);
+  }, [hash]);
 
   return (
     <div className="terminos-page" style={{ backgroundColor: 'var(--nature-bg)', minHeight: '100vh', paddingTop: '120px', paddingBottom: '80px' }}>
+      <section id="faq" className="container mb-5" style={{ maxWidth: '900px', scrollMarginTop: '120px' }}>
+        <h2 className="font-heading fw-bold text-nature-green mb-2 text-center">{t.faq.title}</h2>
+        <p className="text-center text-muted font-body mb-4">{t.faq.subtitle}</p>
+        <div className="accordion shadow-sm" id="faqAccordion" style={{
+          '--bs-accordion-active-bg': '#EBE8DF',
+          '--bs-accordion-active-color': 'var(--nature-dark)',
+          '--bs-accordion-btn-focus-box-shadow': '0 0 0 0.25rem rgba(43, 76, 38, 0.25)'
+        }}>
+          {t.faq.items.map((item, idx) => (
+            <div className="accordion-item rounded-0" key={idx}>
+              <h3 className="accordion-header">
+                <button className="accordion-button collapsed font-body fw-semibold text-nature-dark" type="button" data-bs-toggle="collapse" data-bs-target={`#faq-${idx}`} aria-expanded="false" aria-controls={`faq-${idx}`}>
+                  {item.q}
+                </button>
+              </h3>
+              <div id={`faq-${idx}`} className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div className="accordion-body text-secondary font-body" style={{ lineHeight: '1.8' }}>{item.a}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <div className="container bg-white p-4 p-md-5 shadow-sm rounded-1 border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)', maxWidth: '900px' }}>
         
         <h1 className="font-heading fw-bold text-nature-dark mb-3 text-center">Términos, Condiciones y Políticas de Servicio</h1>
