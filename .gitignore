@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 graphify-out/
+# Herramientas locales de IA (críticas impeccable, capturas Playwright, estado OMC)
+.impeccable/
+.playwright-mcp/
+.omc/

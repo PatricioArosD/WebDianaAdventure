@@ -39,6 +39,31 @@ h1, h2, h3, h4, h5, .font-heading {
   .brand-logo { height: 75px; }
 }
 
+/* Formulario sobre fondo verde oscuro: el placeholder y el calendario nativo vienen pensados para fondo claro */
+.form-dark .form-control {
+  color-scheme: dark;
+}
+
+/* Sin color-scheme en el select: el desplegable nativo quedaría oscuro con las opciones en texto oscuro */
+.form-dark .form-select {
+  --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23dee2e6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.form-dark ::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.form-dark .form-check-input {
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.form-error {
+  background-color: rgba(220, 53, 69, 0.18);
+  color: #ffd7db;
+}
+
 /* Clases utilitarias */
 .bg-nature-dark { background-color: var(--nature-dark); color: var(--nature-light); }
 .text-nature-green { color: var(--nature-green); }

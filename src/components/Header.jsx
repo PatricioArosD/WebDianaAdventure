@@ -66,7 +66,7 @@ const Header = () => {
               {language === 'ES' ? 'EN' : 'ES'}
             </button>
 
-            <NavLink to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 shadow-sm">
+            <NavLink to="/contacto" className="btn btn-nature rounded-0 shadow-sm">
               {t.nav.book}
             </NavLink>
           </div>

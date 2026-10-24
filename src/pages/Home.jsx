@@ -227,7 +227,7 @@ const Home = () => {
           </div>
           
           <div className="mt-5">
-            <Link to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 px-5">
+            <Link to="/contacto" className="btn btn-nature rounded-0 px-5">
               {language === 'ES' ? 'RESERVAR AHORA' : 'BOOK NOW'}
             </Link>
           </div>

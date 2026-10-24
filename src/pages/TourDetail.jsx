@@ -107,7 +107,7 @@ const TourDetail = () => {
                         {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
                       </button>
                     ) : (
-                      <Link to="/contacto" state={{ openForm: true }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">
+                      <Link to="/contacto" state={{ tourId: tour.id }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">
                         {t.ui.bookNow}
                       </Link>
                     )}
