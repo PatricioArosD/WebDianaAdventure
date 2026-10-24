@@ -23,6 +23,22 @@ h1, h2, h3, h4, h5, .font-heading {
   font-family: var(--font-heading);
 }
 
+/* Marca del header: más chica en móvil para que el botón de menú quepa en la misma fila */
+.brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: clamp(0.95rem, 4vw, 1.75rem);
+  white-space: nowrap;
+}
+
+@media (min-width: 576px) {
+  .brand-logo { height: 75px; }
+}
+
 /* Clases utilitarias */
 .bg-nature-dark { background-color: var(--nature-dark); color: var(--nature-light); }
 .text-nature-green { color: var(--nature-green); }
@@ -99,6 +115,12 @@ h1, h2, h3, h4, h5, .font-heading {
 
 .btn-carousel-next {
   right: -20px;
+}
+
+/* En móvil el contenedor no tiene margen lateral y los -20px desbordan la página */
+@media (max-width: 767.98px) {
+  .btn-carousel-prev { left: 0; }
+  .btn-carousel-next { right: 0; }
 }
 
 /* Efecto hover (resalte) de los botones */

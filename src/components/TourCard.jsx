@@ -13,16 +13,15 @@ const TourCard = ({ tour, categoria }) => {
     <>
       <div className="card border-0 rounded-0 shadow h-100 overflow-hidden tour-card-hover bg-white position-relative">
         
-        {/* Etiqueta de Próximamente solo para grupales */}
-        {categoria === 'grupales' && (
-          <div className="position-absolute top-0 start-0 m-3 z-2">
-            <span className="badge bg-dark text-white rounded-0 px-3 py-2 font-body shadow-sm" style={{ letterSpacing: '2px' }}>
-              {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
-            </span>
-          </div>
-        )}
-
         <div className="position-relative">
+          {/* Abajo y no arriba: el título del tour va centrado en la parte superior de la imagen */}
+          {categoria === 'grupales' && (
+            <div className="position-absolute bottom-0 start-0 m-3 z-2" style={{ pointerEvents: 'none' }}>
+              <span className="badge bg-dark text-white rounded-0 px-3 py-2 font-body shadow-sm" style={{ letterSpacing: '2px' }}>
+                {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
+              </span>
+            </div>
+          )}
           {/* Imagen ahora con onClick y cursor de lupa */}
           <img 
             src={tour.thumbnail} 

@@ -13,8 +13,11 @@ const Home = () => {
   // 2. Elegimos el JSON correcto dependiendo del idioma
   const toursData = language === 'ES' ? toursES : toursEN;
 
-  // Unimos los grupales y los de Valdivia para el carrusel
-  const allTours = [...(toursData.grupales || []), ...(toursData.valdivia || [])];
+  // Valdivia primero: los grupales están en "Próximamente" y no conviene abrir con algo no reservable
+  const allTours = [
+    ...(toursData.valdivia || []).map(tour => ({ ...tour, categoria: 'valdivia' })),
+    ...(toursData.grupales || []).map(tour => ({ ...tour, categoria: 'grupales' })),
+  ];
   
   // Estado para el carrusel de tarjetas
   const [startIndex, setStartIndex] = useState(0);
@@ -45,7 +48,7 @@ const Home = () => {
       <div className="position-relative d-flex align-items-center" style={{ 
           height: '85vh', 
           minHeight: '600px',
-          backgroundImage: 'url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&q=80&w=2070")',
+          backgroundImage: 'url("/images/montana_toribio_1.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
@@ -81,7 +84,7 @@ const Home = () => {
           <div className="row g-4">
             {visibleTours.map((tour) => (
               <div className="col-md-4" key={tour.id}>
-                <div className="card border-0 rounded-0 shadow h-100 overflow-hidden">
+                <Link to={`/tour/${tour.categoria}/${tour.id}`} className="card border-0 rounded-0 shadow h-100 overflow-hidden text-decoration-none">
                   <div className="position-relative">
                     <img 
                       src={tour.thumbnail || "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&q=80&w=500"} 
@@ -101,7 +104,7 @@ const Home = () => {
                   <div className="tour-card-banner">
                     {tour.shortDescription || (language === 'ES' ? "Explora paisajes asombrosos" : "Explore amazing landscapes")}
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
@@ -133,11 +136,11 @@ const Home = () => {
           <div className="col-lg-6 offset-lg-1">
             <div className="row g-2">
               <div className="col-8">
-                <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&q=80&w=600" className="img-fluid w-100 h-100 object-fit-cover shadow-sm" alt="Naturaleza 1" loading="lazy" style={{ minHeight: '300px' }}/>
+                <img src="/images/oncol_1.jpg" className="img-fluid w-100 h-100 object-fit-cover shadow-sm" alt={t.home.collageAlts[0]} loading="lazy" style={{ minHeight: '300px' }}/>
               </div>
               <div className="col-4 d-flex flex-column gap-2">
-                <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&q=80&w=300" className="img-fluid w-100 object-fit-cover shadow-sm" alt="Naturaleza 2" loading="lazy" style={{ height: '145px' }}/>
-                <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?auto=format&q=80&w=300" className="img-fluid w-100 object-fit-cover shadow-sm" alt="Ciervo" loading="lazy" style={{ height: '145px' }}/>
+                <img src="/images/birdwatching_7.jpg" className="img-fluid w-100 object-fit-cover shadow-sm" alt={t.home.collageAlts[1]} loading="lazy" style={{ height: '145px' }}/>
+                <img src="/images/parque_alerce_2.jpg" className="img-fluid w-100 object-fit-cover shadow-sm" alt={t.home.collageAlts[2]} loading="lazy" style={{ height: '145px' }}/>
               </div>
             </div>
           </div>
