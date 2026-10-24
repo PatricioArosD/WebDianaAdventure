@@ -100,7 +100,8 @@ const TourDetail = () => {
                   )}
                   <div className="mt-5 text-center">
                     <p className="font-body fw-bold text-nature-dark mb-2">{t.ui.readyToTravel}</p>
-                    
+                    {categoria !== 'grupales' && <p className="font-body small text-body-secondary mb-3">{t.ui.priceNote}</p>}
+
                     {/* Bloqueo del botón para viajes grupales */}
                     {categoria === 'grupales' ? (
                       <button className="btn btn-secondary rounded-0 w-100 py-3 shadow-sm" disabled style={{ cursor: 'not-allowed' }}>

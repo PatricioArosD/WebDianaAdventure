@@ -31,6 +31,7 @@ export const translations = {
       includes: "Incluye",
       excludes: "No Incluye",
       readyToTravel: "¿Listo para viajar?",
+      priceNote: "El valor depende del tamaño del grupo y la fecha. Cotiza sin compromiso.",
       bookNow: "RESERVAR AHORA",
       aboutAdventure: "Sobre esta aventura",
       postcards: "Postales del Destino",
@@ -45,7 +46,7 @@ export const translations = {
       missionTitle: "Nuestra Misión",
       missionText: "Diseñar y operar experiencias de aventura que conecten a las personas con la naturaleza, garantizando en cada expedición el mínimo impacto ambiental, la regeneración activa de los ecosistemas visitados y la formación de viajeros conscientes del valor de proteger el planeta.",
       focusTitle: "Exploración Local con Visión Global",
-      focusText: "Actualmente, nuestro corazón y operaciones están profundamente arraigados en las maravillas de Chile. Ponemos un énfasis especial en Valdivia y guiamos expediciones grupales hacia la majestuosidad de Torres del Paine. A medida que crecemos, nuestra visión se expande hacia horizontes internacionales como Escocia y Taiwán.",
+      focusText: "Actualmente, nuestro corazón y operaciones están profundamente arraigados en las maravillas de Chile. Operamos desde Valdivia, y nuestro guía suma años de experiencia liderando expediciones en destinos como Torres del Paine y San Pedro de Atacama. A medida que crecemos, nuestra visión se expande hacia horizontes internacionales como Escocia y Taiwán.",
       teamTitle: "El Equipo detrás de Diana Adventure",
       dianaTitle: "La Inspiración: Diana",
       dianaText: "Viajar forma parte de nuestro ADN. En Tailandia nos topamos con Diana, una gatita que se convirtió en el alma de nuestra agencia, acompañándonos en todas nuestras aventuras sumando ya más de 8 países en su pasaporte.",
@@ -114,7 +115,7 @@ export const translations = {
       waIntro: "Hola, quiero cotizar una excursión.",
       waName: "Nombre",
       baseTitle: "Nuestra Base",
-      baseLocation: "Los Andes, Chile",
+      baseLocation: "Valdivia, Chile",
       writeUs: "Escríbenos"
     }
   },
@@ -149,6 +150,7 @@ export const translations = {
       includes: "Includes",
       excludes: "Does Not Include",
       readyToTravel: "Ready to travel?",
+      priceNote: "Price depends on group size and date. Ask for a free quote.",
       bookNow: "BOOK NOW",
       aboutAdventure: "About this adventure",
       postcards: "Destination Postcards",
@@ -163,7 +165,7 @@ export const translations = {
       missionTitle: "Our Mission",
       missionText: "To design and operate adventure experiences that connect people with nature, ensuring minimal environmental impact, active ecosystem regeneration, and forming environmentally conscious travelers.",
       focusTitle: "Local Exploration with Global Vision",
-      focusText: "Currently, our heart and operations are deeply rooted in the wonders of Chile. We put special emphasis on Valdivia and guide group expeditions to Torres del Paine. As we grow, our vision expands to international horizons like Scotland and Taiwan.",
+      focusText: "Currently, our heart and operations are deeply rooted in the wonders of Chile. We operate from Valdivia, and our guide brings years of experience leading expeditions in destinations such as Torres del Paine and San Pedro de Atacama. As we grow, our vision expands to international horizons like Scotland and Taiwan.",
       teamTitle: "The Team Behind Diana Adventure",
       dianaTitle: "The Inspiration: Diana",
       dianaText: "Traveling is in our DNA. In Thailand we met Diana, a little cat who became the soul of our agency, joining us on all our adventures with over 8 countries on her passport.",
@@ -232,7 +234,7 @@ export const translations = {
       waIntro: "Hi, I'd like a quote for a tour.",
       waName: "Name",
       baseTitle: "Our Base",
-      baseLocation: "Los Andes, Chile",
+      baseLocation: "Valdivia, Chile",
       writeUs: "Write to Us"
     }
   }

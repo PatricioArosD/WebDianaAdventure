@@ -34,7 +34,7 @@ const Footer = () => {
             <h5 className="font-heading fw-bold mb-4 fs-5 text-outline-black">{t.footer.contactUs}</h5>
             <ul className="list-unstyled font-body">
               <li className="mb-3 text-outline-black"><i className="bi bi-envelope me-2"></i> hola@dianaadventure.cl</li>
-              <li className="mb-4 text-outline-black"><i className="bi bi-geo-alt me-2"></i> Los Andes, Chile</li>
+              <li className="mb-4 text-outline-black"><i className="bi bi-geo-alt me-2"></i> {t.contact.baseLocation}</li>
             </ul>
             <div className="d-flex gap-3">
               <a href="https://www.instagram.com/diana__adventure/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white fs-4 text-outline-black"><i className="bi bi-instagram"></i></a>
