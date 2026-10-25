@@ -37,7 +37,7 @@ const Header = () => {
           <span className="brand-name fw-bold font-heading text-uppercase text-outline-black">Diana Adventure Chile</span>
         </NavLink>
 
-        <button className="navbar-toggler border-light border-opacity-50 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Abrir menú">
+        <button className="navbar-toggler border-light border-opacity-50 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label={t.ui.openMenu}>
           <span className="navbar-toggler-icon"></span>
         </button>
 

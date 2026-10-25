@@ -56,15 +56,13 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-6 text-white">
               <h1 className="hero-title font-heading fw-bold mb-3">
-                {language === 'ES' ? 'Parte a la aventura con' : 'Set off on an adventure with'} <br/>Diana Adventure
+                {t.home.heroTitleLead} <br/>Diana Adventure
               </h1>
               <p className="fs-5 mb-4 font-body">
-                {language === 'ES' 
-                  ? 'Vive experiencias inolvidables en plena naturaleza junto a nosotros.' 
-                  : 'Live unforgettable experiences surrounded by nature with us.'}
+                {t.home.heroText}
               </p>
               <Link to="/nuestras-actividades" className="btn btn-nature rounded-0">
-                {language === 'ES' ? 'Descubrir Actividades' : 'Discover Activities'}
+                {t.home.heroBtn}
               </Link>
             </div>
           </div>
@@ -76,7 +74,7 @@ const Home = () => {
         <div className="carousel-wrapper px-2">
           <h2 className="visually-hidden">{t.nav.activities}</h2>
 
-          <button onClick={prevSlide} className="btn-carousel-side btn-carousel-prev" aria-label="Anterior">
+          <button onClick={prevSlide} className="btn-carousel-side btn-carousel-prev" aria-label={t.ui.prev}>
             <i className="bi bi-chevron-left fs-5"></i>
           </button>
 
@@ -87,13 +85,9 @@ const Home = () => {
                 <Link to={`/tour/${tour.categoria}/${tour.id}`} className="card border-0 rounded-0 shadow h-100 overflow-hidden text-decoration-none">
                   <div className="position-relative">
                     <img 
-                      src={tour.thumbnail || "https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&q=80&w=500"} 
+                      src={tour.thumbnail} 
                       className="tour-card-img" 
                       alt={tour.title}
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&q=80&w=500";
-                      }} 
                     />
                     <div className="position-absolute w-100 text-center" style={{ top: '20px' }}>
                        <h3 className="h4 text-white font-heading fw-bold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
@@ -102,14 +96,14 @@ const Home = () => {
                     </div>
                   </div>
                   <div className="tour-card-banner">
-                    {tour.shortDescription || (language === 'ES' ? "Explora paisajes asombrosos" : "Explore amazing landscapes")}
+                    {tour.shortDescription}
                   </div>
                 </Link>
               </div>
             ))}
           </div>
 
-          <button onClick={nextSlide} className="btn-carousel-side btn-carousel-next" aria-label="Siguiente">
+          <button onClick={nextSlide} className="btn-carousel-side btn-carousel-next" aria-label={t.ui.next}>
             <i className="bi bi-chevron-right fs-5"></i>
           </button>
 
@@ -121,15 +115,13 @@ const Home = () => {
         <div className="row align-items-center">
           <div className="col-lg-5 mb-4 mb-lg-0">
             <h2 className="font-heading fw-bold text-nature-green mb-4">
-              {language === 'ES' ? 'Descubre la Naturaleza en su Estado Puro' : 'Discover Nature in its Purest State'}
+              {t.home.discoverTitle}
             </h2>
             <p className="text-muted mb-4" style={{ lineHeight: '1.8' }}>
-              {language === 'ES' 
-                ? 'Parte a la aventura con nosotros y vive momentos intensos explorando los paisajes salvajes más hermosos de Chile y el mundo.' 
-                : 'Set off on an adventure with us and live intense moments exploring the most beautiful wild landscapes in Chile and the world.'}
+              {t.home.discoverText}
             </p>
             <Link to="/nuestras-actividades" className="btn btn-nature rounded-0">
-              {language === 'ES' ? 'Saber Más' : 'Learn More'}
+              {t.home.discoverBtn}
             </Link>
           </div>
           
@@ -150,7 +142,7 @@ const Home = () => {
       {/* seccion 3.5 : NUESTRO GUÍA */}
 
       <div className="container-fluid py-5 my-5 position-relative bg-parallax" style={{
-        backgroundImage: 'linear-gradient(rgba(31, 44, 35, 0.85), rgba(31, 44, 35, 0.9)), url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&q=80&w=2000")',
+        backgroundImage: 'linear-gradient(rgba(31, 44, 35, 0.85), rgba(31, 44, 35, 0.9)), url("/images/oncol_3.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
@@ -166,7 +158,6 @@ const Home = () => {
   alt="Guía Rodrigo Diana Adventure" 
   loading="lazy"
   className="img-cover-full shadow-lg" // <- Reemplazamos 'img-fluid' por nuestra nueva clase.
-  onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&q=80&w=800"; }}
 />
                 <div className="position-absolute bottom-0 start-0 w-50" style={{ height: '6px', backgroundColor: 'var(--nature-green)' }}></div>
               </div>
@@ -178,7 +169,7 @@ const Home = () => {
                 {t.home.guideTitle}
               </h2>
               {/* Cambiamos el texto a 'text-light' con un poco de opacidad para no cansar la vista */}
-              <p className="text-light opacity-75 mb-4 font-body" style={{ lineHeight: '1.8', fontSize: '1.05rem', textAlign: 'justify' }}>
+              <p className="text-light opacity-75 mb-4 font-body" style={{ lineHeight: '1.8', fontSize: '1.05rem', }}>
                 {t.home.guideText}
               </p>
               {/* Cambiamos el botón oscuro por el botón verde principal para que contraste con el fondo */}
