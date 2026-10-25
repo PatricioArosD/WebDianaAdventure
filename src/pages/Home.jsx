@@ -74,7 +74,8 @@ const Home = () => {
       {/* 2. CARRUSEL SUPERPUESTO (3 Tarjetas) */}
       <div className="container overlap-cards mb-5">
         <div className="carousel-wrapper px-2">
-          
+          <h2 className="visually-hidden">{t.nav.activities}</h2>
+
           <button onClick={prevSlide} className="btn-carousel-side btn-carousel-prev" aria-label="Anterior">
             <i className="bi bi-chevron-left fs-5"></i>
           </button>
@@ -95,9 +96,9 @@ const Home = () => {
                       }} 
                     />
                     <div className="position-absolute w-100 text-center" style={{ top: '20px' }}>
-                       <h4 className="text-white font-heading fw-bold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+                       <h3 className="h4 text-white font-heading fw-bold" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                           {tour.title}
-                       </h4>
+                       </h3>
                     </div>
                   </div>
                   <div className="tour-card-banner">

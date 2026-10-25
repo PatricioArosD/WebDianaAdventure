@@ -4,6 +4,7 @@ import { useEffect, useContext, useState } from 'react';
 import { LanguageContext } from '../context/LanguageContext';
 import toursES from '../data/tours_es.json';
 import toursEN from '../data/tours_en.json';
+import Lightbox from '../components/Lightbox';
 
 const TourDetail = () => {
   const { categoria, id } = useParams();
@@ -60,26 +61,27 @@ const TourDetail = () => {
         <div className="container mt-5">
           <div className="row g-4 g-lg-5">
             <div className="col-lg-8">
-              <h3 className="font-heading fw-bold text-nature-green mb-4 border-bottom border-secondary border-opacity-25 pb-3">
+              <h2 className="h3 font-heading fw-bold text-nature-green mb-4 border-bottom border-secondary border-opacity-25 pb-3">
                 {t.ui.aboutAdventure}
-              </h3>
+              </h2>
               <p className="fs-5 text-secondary font-body mb-5" style={{ lineHeight: '1.9', whiteSpace: 'pre-line' }}>{tour.description}</p>
 
               {tour.gallery && tour.gallery.length > 0 && (
                 <div className="mt-5">
-                  <h4 className="font-heading fw-bold text-nature-dark mb-4">{t.ui.postcards}</h4>
+                  <h3 className="h4 font-heading fw-bold text-nature-dark mb-4">{t.ui.postcards}</h3>
                   <div className="row g-3 gallery-track">
                     {tour.gallery.map((imgSrc, index) => (
                       <div className="col-md-6" key={index}>
                         <div className="gallery-img-wrapper shadow-sm h-100 rounded-1">
-                          <img 
-                            src={imgSrc} 
-                            alt={tour.title} 
-                            loading="lazy" 
-                            className="img-fluid w-100 gallery-img-zoom" 
-                            style={{ height: '250px', objectFit: 'cover', cursor: 'zoom-in' }}
-                            onClick={() => setSelectedImage(imgSrc)}
-                          />
+                          <button type="button" className="gallery-open p-0 border-0 bg-transparent w-100 d-block" onClick={() => setSelectedImage({ src: imgSrc, alt: `${tour.title} – ${t.ui.photo} ${index + 1}` })} aria-label={`${t.ui.enlarge}: ${tour.title} – ${t.ui.photo} ${index + 1}`}>
+                            <img
+                              src={imgSrc}
+                              alt={`${tour.title} – ${t.ui.photo} ${index + 1}`}
+                              loading="lazy"
+                              className="img-fluid w-100 gallery-img-zoom"
+                              style={{ height: '250px', objectFit: 'cover', cursor: 'zoom-in' }}
+                            />
+                          </button>
                         </div>
                       </div>
                     ))}
@@ -94,14 +96,14 @@ const TourDetail = () => {
                   {tour.duration && (
                     <div className="mb-4 text-center border-bottom pb-3">
                       <i className="bi bi-clock-history fs-3 text-nature-green mb-2"></i>
-                      <h6 className="fw-bold font-heading m-0">{t.ui.duration}</h6>
+                      <h3 className="h6 fw-bold font-heading m-0">{t.ui.duration}</h3>
                       <p className="text-muted small m-0">{tour.duration}</p>
                       {tour.difficulty && <p className="text-muted small m-0 mt-1">{t.ui.difficulty}: <strong>{tour.difficulty}</strong></p>}
                     </div>
                   )}
                   {tour.includes && tour.includes.length > 0 && (
                     <div className="mb-4">
-                      <h5 className="font-heading fw-bold text-nature-green mb-3"><i className="bi bi-check-circle-fill me-2"></i>{t.ui.includes}</h5>
+                      <h3 className="h5 font-heading fw-bold text-nature-green mb-3"><i className="bi bi-check-circle-fill me-2"></i>{t.ui.includes}</h3>
                       <ul className="list-unstyled text-secondary small">
                         {tour.includes.map((item, index) => (
                           <li key={index} className="mb-2 d-flex align-items-start"><i className="bi bi-dot text-nature-green fs-5 me-1"></i><span>{item}</span></li>
@@ -111,7 +113,7 @@ const TourDetail = () => {
                   )}
                   {tour.excludes && tour.excludes.length > 0 && (
                     <div className="mb-4">
-                      <h5 className="font-heading fw-bold text-danger mb-3"><i className="bi bi-x-circle-fill me-2"></i>{t.ui.excludes}</h5>
+                      <h3 className="h5 font-heading fw-bold text-danger mb-3"><i className="bi bi-x-circle-fill me-2"></i>{t.ui.excludes}</h3>
                       <ul className="list-unstyled text-secondary small">
                         {tour.excludes.map((item, index) => (
                           <li key={index} className="mb-2 d-flex align-items-start"><i className="bi bi-dot text-danger fs-5 me-1"></i><span>{item}</span></li>
@@ -155,27 +157,8 @@ const TourDetail = () => {
         </div>
       )}
 
-      {/* POPUP / MODAL DEL VISOR DE IMÁGENES */}
       {selectedImage && (
-        <div 
-          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" 
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.9)', zIndex: 9999, cursor: 'zoom-out' }}
-          onClick={() => setSelectedImage(null)}
-        >
-          <button 
-            className="btn-close btn-close-white position-absolute top-0 end-0 m-4" 
-            onClick={() => setSelectedImage(null)}
-            aria-label="Cerrar"
-          ></button>
-          
-          <img 
-            src={selectedImage} 
-            alt="Visor ampliado" 
-            className="img-fluid rounded shadow-lg" 
-            style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain', cursor: 'default' }}
-            onClick={(e) => e.stopPropagation()} 
-          />
-        </div>
+        <Lightbox src={selectedImage.src} alt={selectedImage.alt} onClose={() => setSelectedImage(null)} />
       )}
     </>
   );

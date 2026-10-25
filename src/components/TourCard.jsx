@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { LanguageContext } from '../context/LanguageContext';
+import Lightbox from './Lightbox';
 
 const TourCard = ({ tour, categoria }) => {
   const { t } = useContext(LanguageContext);
@@ -21,15 +22,9 @@ const TourCard = ({ tour, categoria }) => {
               </span>
             </div>
           )}
-          {/* Imagen ahora con onClick y cursor de lupa */}
-          <img 
-            src={tour.thumbnail} 
-            className="tour-card-img" 
-            alt={tour.title} 
-            loading="lazy"
-            onClick={() => setShowModal(true)}
-            style={{ cursor: 'zoom-in' }} 
-          />
+          <button type="button" className="p-0 border-0 bg-transparent w-100 d-block" onClick={() => setShowModal(true)} aria-label={`${t.ui.enlarge}: ${tour.title}`}>
+            <img src={tour.thumbnail} className="tour-card-img" alt={tour.title} loading="lazy" style={{ cursor: 'zoom-in' }} />
+          </button>
           {/* Añadido pointerEvents: 'none' para que el clic pase a través del texto hacia la imagen */}
           <div className="position-absolute w-100 text-center" style={{ top: '20px', pointerEvents: 'none' }}>
              <h3 className="h4 text-white font-heading fw-bold px-3" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.9)' }}>
@@ -53,28 +48,7 @@ const TourCard = ({ tour, categoria }) => {
         </div>
       </div>
 
-      {/* MODAL DEL VISOR DE IMÁGENES */}
-      {showModal && (
-        <div 
-          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" 
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.9)', zIndex: 9999, cursor: 'zoom-out' }}
-          onClick={() => setShowModal(false)}
-        >
-          <button 
-            className="btn-close btn-close-white position-absolute top-0 end-0 m-4" 
-            onClick={() => setShowModal(false)}
-            aria-label="Cerrar"
-          ></button>
-          
-          <img 
-            src={tour.thumbnail} 
-            alt={tour.title} 
-            className="img-fluid rounded shadow-lg" 
-            style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain', cursor: 'default' }}
-            onClick={(e) => e.stopPropagation()} 
-          />
-        </div>
-      )}
+      {showModal && <Lightbox src={tour.thumbnail} alt={tour.title} onClose={() => setShowModal(false)} />}
     </>
   );
 };

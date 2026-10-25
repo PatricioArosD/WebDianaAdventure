@@ -11,11 +11,11 @@ const Footer = () => {
       <div className="container mt-4">
         <div className="row g-4">
           <div className="col-md-4 mb-4">
-            <h5 className="font-heading fw-bold mb-4 fs-4 text-outline-black"><img 
+            <h2 className="font-heading fw-bold mb-4 fs-4 text-outline-black"><img 
             src="/images/logo-gato.png" 
             alt="Diana Adventure Logo" 
             style={{ height: '75px', width: 'auto', objectFit: 'contain' }} 
-          />Diana Adventure</h5>
+          />Diana Adventure</h2>
             <ul className="list-unstyled font-body">
               <li className="mb-2"><Link to="/nosotros" className="footer-link">{t.footer.aboutUs}</Link></li>
               <li className="mb-2"><Link to="/nuestras-actividades" className="footer-link">{t.footer.activities}</Link></li>
@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-4 mb-4">
-            <h5 className="font-heading fw-bold mb-4 fs-5 text-outline-black">{t.footer.practicalInfo}</h5>
+            <h2 className="font-heading fw-bold mb-4 fs-5 text-outline-black">{t.footer.practicalInfo}</h2>
             <ul className="list-unstyled font-body">
               <li className="mb-2"><Link to="/terminos#faq" className="footer-link">{t.footer.faq}</Link></li>
               <li className="mb-2"><Link to="/terminos" className="footer-link">{t.footer.terms}</Link></li>
@@ -31,7 +31,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-4 mb-4">
-            <h5 className="font-heading fw-bold mb-4 fs-5 text-outline-black">{t.footer.contactUs}</h5>
+            <h2 className="font-heading fw-bold mb-4 fs-5 text-outline-black">{t.footer.contactUs}</h2>
             <ul className="list-unstyled font-body">
               <li className="mb-3 text-outline-black"><i className="bi bi-envelope me-2"></i> hola@dianaadventure.cl</li>
               <li className="mb-4 text-outline-black"><i className="bi bi-geo-alt me-2"></i> {t.contact.baseLocation}</li>

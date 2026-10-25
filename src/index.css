@@ -11,6 +11,9 @@
   
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Open Sans', sans-serif;
+
+  /* El gris secundario de Bootstrap (#6c757d) da 4,2:1 sobre el fondo hueso; este llega a ~5,6:1 */
+  --bs-secondary-rgb: 90, 98, 104;
 }
 
 body {
@@ -240,13 +243,9 @@ h1, h2, h3, h4, h5, .font-heading {
 }
 
 /* Contorno negro para resaltar el texto sobre fondos complejos */
+/* Antes era un contorno negro de 1px; una sombra suave mantiene la legibilidad sobre foto sin verse sucia */
 .text-outline-black {
-  text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000,
-     2px  2px 4px rgba(0,0,0,0.9); /* Sombra adicional para profundidad */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
   color: white !important;
 }
 
@@ -255,7 +254,7 @@ h1, h2, h3, h4, h5, .font-heading {
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 2px 2px 4px rgba(0,0,0,0.9);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
 }
 
 .footer-link:hover {

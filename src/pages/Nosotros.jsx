@@ -28,13 +28,13 @@ const Nosotros = () => {
         <div className="row g-4 justify-content-center">
           <div className="col-md-5">
             <div className="bg-white p-5 h-100 shadow-sm border-0 border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)' }}>
-              <h3 className="font-heading fw-bold text-nature-green mb-4">{t.about.visionTitle}</h3>
+              <h2 className="h3 font-heading fw-bold text-nature-green mb-4">{t.about.visionTitle}</h2>
               <p className="text-secondary" style={{ lineHeight: '1.8' }}>{t.about.visionText}</p>
             </div>
           </div>
           <div className="col-md-5">
             <div className="bg-white p-5 h-100 shadow-sm border-0 border-top border-4" style={{ '--bs-border-color': 'var(--nature-green)' }}>
-              <h3 className="font-heading fw-bold text-nature-green mb-4">{t.about.missionTitle}</h3>
+              <h2 className="h3 font-heading fw-bold text-nature-green mb-4">{t.about.missionTitle}</h2>
               <p className="text-secondary" style={{ lineHeight: '1.8' }}>{t.about.missionText}</p>
             </div>
           </div>
@@ -60,15 +60,15 @@ const Nosotros = () => {
           </div>
           <div className="col-lg-6">
             <div className="mb-4">
-              <h4 className="font-heading fw-bold border-bottom pb-2 mb-3">{t.about.dianaTitle}</h4>
+              <h3 className="h4 font-heading fw-bold border-bottom pb-2 mb-3">{t.about.dianaTitle}</h3>
               <p className="text-secondary">{t.about.dianaText}</p>
             </div>
             <div className="mb-4">
-              <h4 className="font-heading fw-bold border-bottom pb-2 mb-3">{t.about.rodrigoTitle}</h4>
+              <h3 className="h4 font-heading fw-bold border-bottom pb-2 mb-3">{t.about.rodrigoTitle}</h3>
               <p className="text-secondary">{t.about.rodrigoText}</p>
             </div>
             <div className="mb-4">
-              <h4 className="font-heading fw-bold border-bottom pb-2 mb-3">{t.about.constanzaTitle}</h4>
+              <h3 className="h4 font-heading fw-bold border-bottom pb-2 mb-3">{t.about.constanzaTitle}</h3>
               <p className="text-secondary">{t.about.constanzaText}</p>
             </div>
           </div>
