@@ -30,6 +30,10 @@ export const translations = {
     ui: {
       viewDetails: "Ver Detalles",
       duration: "Duración",
+      difficulty: "Dificultad",
+      comingSoonTitle: "Este viaje grupal está en preparación",
+      comingSoonText: "Aún no abrimos reservas. Mientras tanto, puedes vivir la naturaleza del sur con nuestras experiencias en Valdivia.",
+      comingSoonLink: "Ver experiencias en Valdivia",
       includes: "Incluye",
       excludes: "No Incluye",
       readyToTravel: "¿Listo para viajar?",
@@ -39,6 +43,13 @@ export const translations = {
       postcards: "Postales del Destino",
       notFound: "Expedición no encontrada",
       backActivities: "Ver nuestras actividades"
+    },
+    activities: {
+      title: "Nuestras Actividades",
+      intro: "Experiencias de naturaleza en Valdivia con guía certificado, en grupos pequeños. Elige tu salida y te enviamos la cotización.",
+      valdiviaTitle: "Experiencias en Valdivia",
+      groupTitle: "Viajes grupales",
+      groupNote: "Estamos preparando estos viajes. Aún no abrimos reservas."
     },
     about: {
       title: "Nuestra Historia",
@@ -151,6 +162,10 @@ export const translations = {
     ui: {
       viewDetails: "View Details",
       duration: "Duration",
+      difficulty: "Difficulty",
+      comingSoonTitle: "This group trip is in the works",
+      comingSoonText: "Bookings are not open yet. In the meantime, you can experience southern Chile's nature with our tours in Valdivia.",
+      comingSoonLink: "See experiences in Valdivia",
       includes: "Includes",
       excludes: "Does Not Include",
       readyToTravel: "Ready to travel?",
@@ -160,6 +175,13 @@ export const translations = {
       postcards: "Destination Postcards",
       notFound: "Expedition not found",
       backActivities: "View our activities"
+    },
+    activities: {
+      title: "Our Activities",
+      intro: "Nature experiences in Valdivia with a certified guide, in small groups. Pick your outing and we will send you a quote.",
+      valdiviaTitle: "Experiences in Valdivia",
+      groupTitle: "Group trips",
+      groupNote: "We are preparing these trips. Bookings are not open yet."
     },
     about: {
       title: "Our Story",

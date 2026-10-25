@@ -37,8 +37,20 @@ const TourDetail = () => {
           </div>
         </div>
 
+        {categoria === 'grupales' && (
+          <div className="bg-nature-dark">
+            <div className="container py-3 d-flex flex-wrap align-items-center justify-content-between gap-3 font-body">
+              <div>
+                <p className="fw-bold mb-1"><i className="bi bi-hourglass-split me-2" aria-hidden="true"></i>{t.ui.comingSoonTitle}</p>
+                <p className="mb-0 small opacity-75">{t.ui.comingSoonText}</p>
+              </div>
+              <Link to="/nuestras-actividades" className="btn btn-outline-light rounded-0 flex-shrink-0">{t.ui.comingSoonLink}</Link>
+            </div>
+          </div>
+        )}
+
         <div className="container mt-5">
-          <div className="row g-5">
+          <div className="row g-4 g-lg-5">
             <div className="col-lg-8">
               <h3 className="font-heading fw-bold text-nature-green mb-4 border-bottom border-secondary border-opacity-25 pb-3">
                 {t.ui.aboutAdventure}
@@ -76,6 +88,7 @@ const TourDetail = () => {
                       <i className="bi bi-clock-history fs-3 text-nature-green mb-2"></i>
                       <h6 className="fw-bold font-heading m-0">{t.ui.duration}</h6>
                       <p className="text-muted small m-0">{tour.duration}</p>
+                      {tour.difficulty && <p className="text-muted small m-0 mt-1">{t.ui.difficulty}: <strong>{tour.difficulty}</strong></p>}
                     </div>
                   )}
                   {tour.includes && tour.includes.length > 0 && (
@@ -104,9 +117,12 @@ const TourDetail = () => {
 
                     {/* Bloqueo del botón para viajes grupales */}
                     {categoria === 'grupales' ? (
-                      <button className="btn btn-secondary rounded-0 w-100 py-3 shadow-sm" disabled style={{ cursor: 'not-allowed' }}>
-                        {language === 'ES' ? 'PRÓXIMAMENTE' : 'COMING SOON'}
-                      </button>
+                      <>
+                        <button className="btn btn-secondary rounded-0 w-100 py-3 shadow-sm" disabled style={{ cursor: 'not-allowed' }}>
+                          {t.contact.comingSoon.toUpperCase()}
+                        </button>
+                        <Link to="/nuestras-actividades" className="d-inline-block mt-3 small text-nature-green fw-semibold">{t.ui.comingSoonLink}</Link>
+                      </>
                     ) : (
                       <Link to="/contacto" state={{ tourId: tour.id }} className="btn btn-nature rounded-0 w-100 py-3 shadow-sm">
                         {t.ui.bookNow}

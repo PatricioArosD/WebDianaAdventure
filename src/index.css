@@ -64,6 +64,28 @@ h1, h2, h3, h4, h5, .font-heading {
   color: #ffd7db;
 }
 
+/* Datos clave de un tour (duración, dificultad) */
+.tour-chip {
+  background-color: var(--nature-bg);
+  color: var(--nature-dark);
+  padding: 0.25rem 0.6rem;
+}
+
+.coming-soon-item {
+  color: var(--nature-dark);
+}
+
+.coming-soon-item img {
+  filter: saturate(0.6);
+  transition: filter 0.3s ease, transform 0.5s ease;
+}
+
+.coming-soon-item:hover img,
+.coming-soon-item:focus-visible img {
+  filter: saturate(1);
+  transform: scale(1.05);
+}
+
 /* Clases utilitarias */
 .bg-nature-dark { background-color: var(--nature-dark); color: var(--nature-light); }
 .text-nature-green { color: var(--nature-green); }
