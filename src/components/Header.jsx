@@ -25,7 +25,7 @@ const Header = () => {
     : { backgroundColor: 'var(--nature-dark)' };
 
   return (
-    <nav className={navClasses} style={navStyle}>
+    <nav className={navClasses} style={navStyle} data-bs-theme="dark">
       <div className="container">
         
         <NavLink className="navbar-brand d-flex align-items-center text-white gap-2" to="/">
@@ -37,7 +37,7 @@ const Header = () => {
           <span className="brand-name fw-bold font-heading text-uppercase text-outline-black">Diana Adventure Chile</span>
         </NavLink>
 
-        <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Abrir menú">
+        <button className="navbar-toggler border-light border-opacity-50 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Abrir menú">
           <span className="navbar-toggler-icon"></span>
         </button>
 

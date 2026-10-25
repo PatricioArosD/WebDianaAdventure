@@ -17,6 +17,14 @@ const TourDetail = () => {
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
+  // La barra fija tapa el final del footer: reservamos ese espacio en el body mientras está visible
+  const hasBookBar = Boolean(tour) && categoria !== 'grupales';
+  useEffect(() => {
+    if (!hasBookBar) return;
+    document.body.classList.add('has-book-bar');
+    return () => document.body.classList.remove('has-book-bar');
+  }, [hasBookBar]);
+
   if (!tour) {
     return (
       <div className="container text-center min-vh-100 d-flex flex-column justify-content-center align-items-center">
@@ -60,7 +68,7 @@ const TourDetail = () => {
               {tour.gallery && tour.gallery.length > 0 && (
                 <div className="mt-5">
                   <h4 className="font-heading fw-bold text-nature-dark mb-4">{t.ui.postcards}</h4>
-                  <div className="row g-3">
+                  <div className="row g-3 gallery-track">
                     {tour.gallery.map((imgSrc, index) => (
                       <div className="col-md-6" key={index}>
                         <div className="gallery-img-wrapper shadow-sm h-100 rounded-1">
@@ -136,6 +144,16 @@ const TourDetail = () => {
           </div>
         </div>
       </div>
+
+      {categoria !== 'grupales' && (
+        <div className="mobile-book-bar d-lg-none position-fixed bottom-0 start-0 end-0 bg-white px-3 pt-3 d-flex align-items-center gap-3" style={{ zIndex: 1030 }}>
+          <div className="flex-grow-1 font-body small lh-sm" style={{ minWidth: 0 }}>
+            <span className="d-block fw-bold text-truncate">{tour.title}</span>
+            <span className="text-body-secondary">{tour.duration?.split(' (')[0]}</span>
+          </div>
+          <Link to="/contacto" state={{ tourId: tour.id }} className="btn btn-nature rounded-0 flex-shrink-0">{t.ui.bookNow}</Link>
+        </div>
+      )}
 
       {/* POPUP / MODAL DEL VISOR DE IMÁGENES */}
       {selectedImage && (

@@ -39,8 +39,6 @@ const Home = () => {
     }
   };
 
-  const visibleTours = allTours.slice(startIndex, startIndex + 3);
-
   return (
     <div className="home-page">
       
@@ -57,7 +55,7 @@ const Home = () => {
         <div className="container position-relative z-2">
           <div className="row">
             <div className="col-lg-6 text-white">
-              <h1 className="font-heading fw-bold mb-3" style={{ fontSize: '3.5rem' }}>
+              <h1 className="hero-title font-heading fw-bold mb-3">
                 {language === 'ES' ? 'Parte a la aventura con' : 'Set off on an adventure with'} <br/>Diana Adventure
               </h1>
               <p className="fs-5 mb-4 font-body">
@@ -81,9 +79,10 @@ const Home = () => {
             <i className="bi bi-chevron-left fs-5"></i>
           </button>
 
-          <div className="row g-4">
-            {visibleTours.map((tour) => (
-              <div className="col-md-4" key={tour.id}>
+          {/* En móvil se muestran todos en una franja deslizable; en escritorio, solo los 3 de la ventana actual */}
+          <div className="row g-4 carousel-track">
+            {allTours.map((tour, index) => (
+              <div className={`col-md-4 ${index >= startIndex && index < startIndex + 3 ? '' : 'd-md-none'}`} key={tour.id}>
                 <Link to={`/tour/${tour.categoria}/${tour.id}`} className="card border-0 rounded-0 shadow h-100 overflow-hidden text-decoration-none">
                   <div className="position-relative">
                     <img 
@@ -149,12 +148,10 @@ const Home = () => {
 
       {/* seccion 3.5 : NUESTRO GUÍA */}
 
-      <div className="container-fluid py-5 my-5 position-relative" style={{
-        // Reemplaza la URL por otra imagen de bosque/montaña si lo deseas
+      <div className="container-fluid py-5 my-5 position-relative bg-parallax" style={{
         backgroundImage: 'linear-gradient(rgba(31, 44, 35, 0.85), rgba(31, 44, 35, 0.9)), url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&q=80&w=2000")',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed' // Esto crea el efecto de que el fondo se queda quieto al hacer scroll
+        backgroundPosition: 'center'
       }}>
         <div className="container py-4">
           <div className="row align-items-center">

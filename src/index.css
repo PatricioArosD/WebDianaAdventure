@@ -164,10 +164,27 @@ h1, h2, h3, h4, h5, .font-heading {
   right: -20px;
 }
 
-/* En móvil el contenedor no tiene margen lateral y los -20px desbordan la página */
+/* En móvil las flechas no sirven (todo es deslizable): franja horizontal con snap, la tarjeta siguiente asoma */
 @media (max-width: 767.98px) {
-  .btn-carousel-prev { left: 0; }
-  .btn-carousel-next { right: 0; }
+  .btn-carousel-side { display: none; }
+
+  .carousel-track,
+  .gallery-track {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .carousel-track::-webkit-scrollbar,
+  .gallery-track::-webkit-scrollbar { display: none; }
+
+  .carousel-track > *,
+  .gallery-track > * {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
 }
 
 /* Efecto hover (resalte) de los botones */
@@ -195,7 +212,31 @@ h1, h2, h3, h4, h5, .font-heading {
   background-image: linear-gradient(rgba(31, 44, 35, 0.8), rgba(31, 44, 35, 0.9)), url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&q=80&w=2000');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+}
+
+/* Fondo fijo solo en escritorio: iOS Safari lo ignora o lo dibuja enorme y pixelado en móviles */
+@media (min-width: 992px) and (hover: hover) {
+  .footer-bg,
+  .bg-parallax {
+    background-attachment: fixed;
+  }
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 1.5rem + 3.5vw, 3.5rem);
+  line-height: 1.1;
+}
+
+/* Barra de reserva fija en móvil: deja libre la zona segura del iPhone */
+.mobile-book-bar {
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  box-shadow: 0 -6px 16px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 991.98px) {
+  body.has-book-bar {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
 }
 
 /* Contorno negro para resaltar el texto sobre fondos complejos */
